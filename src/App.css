@@ -1,10 +1,30 @@
+:root {
+  --primaryColor: #a5907e;
+  --mainWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #9e9e9e;
+  --mainPink: #f7dad9;
+  --mainLava: #443730;
+  --mainStyle: #2274a5;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+/* globals */
 body {
+  padding-top: 0px;
+  /* color: var(--darkGrey); */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+/* body {
   background: lightblue url(coffee-apple.jpg) no-repeat fixed center;
   -webkit-background: cover;
   -moz-background: cover;
   -o-background: cover;
   background: cover;
-}
+} */
 .dark-overlay {
   background-color: rgba(239, 188, 213, 0.5);
   position: absolute;

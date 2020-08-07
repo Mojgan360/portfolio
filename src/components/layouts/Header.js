@@ -1,11 +1,10 @@
 import React from 'react'
-import avatar from '../../avatar.jpg'
+import avatar from '../../images/avatar.jpg'
 import Typed from 'react-typed'
 
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'
 import { Avatar, Grid, Typography, Box } from '@material-ui/core'
-import { Height } from '@material-ui/icons'
 
 const useStyles = makeStyles((theme) => ({
   typedContainer: {
@@ -23,10 +22,11 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   title: {
-    color: '#EFBCD5',
+    color: 'var(--primaryColor)',
   },
   subtitle: {
-    color: '#ff6699',
+    color: 'var(--mainLava)',
+
     marginBottom: '3rem',
   },
 }))
@@ -39,16 +39,17 @@ const Header = () => {
         <Avatar className={classes.avatar} src={avatar} alt='avatar' />
       </Grid>
 
-      <Typography className={classes.title} variant='h4'>
+      <Typography className={classes.title} variant='h5'>
         <Typed strings={['Mojgan Farmahini  ']} typeSpeed={40}></Typed>
       </Typography>
       <br />
-      <Typography className={classes.subtitle} variant='h5'>
+      <Typography className={classes.subtitle} variant='h4'>
         <Typed
           strings={[
-            'System Utvecklare-Java ',
-            'Web Utvecklare ',
-            'MERN Stack ',
+            'System Developer- JAVA ',
+            'MERN Stack Developer',
+            'Front-End Developer',
+            'Web Developer ',
           ]}
           typeSpeed={40}
           backSpeed={60}

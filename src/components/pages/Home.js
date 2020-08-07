@@ -1,22 +1,27 @@
 import React from 'react'
-import Navbar from '../layouts/Navbar'
 import Header from '../layouts/Header'
 import Particles from 'react-particles-js'
-import { makeStyles } from '@material-ui/core/styles'
 
+import { makeStyles } from '@material-ui/core/styles'
+import bg from '../../images/bg.jpg'
 const useStyles = makeStyles((theme) => ({
   particlesCanva: {
     position: 'absolute',
+    opacity: '0.3',
+    backgroundImage: `url(${bg}) `,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
   },
 }))
 
-const Home = () => {
+const Home = ({ children }) => {
   const classes = useStyles()
 
   return (
     <>
-      <Navbar />
       <Header />
+
       <Particles
         canvasClassName={classes.particlesCanva}
         params={{
@@ -25,7 +30,7 @@ const Home = () => {
               value: 45,
               density: {
                 enable: true,
-                value_area: 900,
+                value_area: 800,
               },
             },
             shape: {
@@ -36,7 +41,7 @@ const Home = () => {
               },
             },
             size: {
-              value: 8,
+              value: 5,
               random: true,
               anim: {
                 enable: true,
@@ -60,7 +65,9 @@ const Home = () => {
             },
           },
         }}
-      />
+      >
+        {children}
+      </Particles>
     </>
   )
 }

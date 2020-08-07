@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import avatar from '../../images/avatar.jpg'
+
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'
 import Drawer from '@material-ui/core/Drawer'
@@ -25,11 +28,10 @@ import {
   ContactMail,
 } from '@material-ui/icons'
 
-import avatar from '../../avatar.jpg'
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     width: 250,
-    background: '#2E294E',
+    background: 'var(--mainPink)',
     height: '100%',
   },
   avatar: {
@@ -39,15 +41,15 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(13),
   },
   listItem: {
-    color: '#EFBCD5',
+    color: 'var(--mainLava)',
   },
 }))
 
 const menuItems = [
-  { listIcon: <Home />, listText: 'Home' },
-  { listIcon: <AssignmentInd />, listText: 'Resume' },
-  { listIcon: <Apps />, listText: 'Portfolio' },
-  { listIcon: <ContactMail />, listText: 'Contacts' },
+  { listIcon: <Home />, listText: 'Home', listPath: '/' },
+  { listIcon: <AssignmentInd />, listText: 'Resume', listPath: '/resume' },
+  { listIcon: <Apps />, listText: 'Portfolio', listPath: '/Portfolio' },
+  { listIcon: <ContactMail />, listText: 'Contacts', listPath: '/contact' },
 ]
 
 const Navbar = () => {
@@ -70,7 +72,7 @@ const Navbar = () => {
         <Divider />
         <List>
           {menuItems.map((item, index) => (
-            <ListItem key={index}>
+            <ListItem key={index} component={Link} to={item.listPath}>
               <ListItemIcon className={classes.listItem}>
                 {item.listIcon}
               </ListItemIcon>
@@ -86,12 +88,14 @@ const Navbar = () => {
   return (
     <>
       <Box component='nav'>
-        <AppBar position='static' style={{ background: '#ccc' }}>
+        <AppBar position='static' style={{ background: 'var(--mainPink)' }}>
           <Toolbar>
             <IconButton onClick={toggleSlider('show', true)}>
               <ArrowBackOutlined style={{ color: 'green' }} />
             </IconButton>
-            <Typography variant='h5'>Portfolio</Typography>
+            <Typography style={{ color: 'var(--mainLava)' }} variant='h5'>
+              Portfolio
+            </Typography>
             <Drawer
               open={state.show}
               anchor='right'
