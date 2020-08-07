@@ -1,8 +1,16 @@
 import React from 'react'
 import './App.css'
+import CssBaseline from '@material-ui/core/CssBaseline'
+
+import Home from './components/pages/Home'
 
 function App() {
-  return <div className='App'>hello</div>
+  return (
+    <>
+      <CssBaseline />
+      <Home />
+    </>
+  )
 }
 
 export default App
