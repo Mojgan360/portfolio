@@ -1,6 +1,6 @@
 import React from 'react'
-import { makeStyles, withStyles } from '@material-ui/core/styles'
-import { TextField, Grid, Typography, Button, Box } from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles'
+import { TextField, Grid, Typography, Box } from '@material-ui/core'
 
 //CSS
 const InputField = withStyles({
