@@ -17,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1,
   },
   avatar: {
-    width: theme.spacing(8),
-    height: theme.spacing(8),
+    width: theme.spacing(20),
+    height: theme.spacing(20),
     margin: theme.spacing(1),
   },
   title: {
