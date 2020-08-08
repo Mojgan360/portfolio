@@ -18,8 +18,7 @@ const useStyles = makeStyles({
   },
   cardContainer: {
     maxWidth: 345,
-    margin: '5rem',
-    margin: '3rem auto',
+    margin: '5rem auto',
   },
 })
 const Portfolio = () => {
