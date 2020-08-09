@@ -1,75 +1,72 @@
 import React from 'react'
+import bg from '../../images/bg-gray.jpg'
 import Header from '../layouts/Header'
-import Particles from 'react-particles-js'
+import Resume from '../pages/Resume'
 
-import { makeStyles } from '@material-ui/core/styles'
-import bg from '../../images/bg.jpg'
-const useStyles = makeStyles((theme) => ({
-  particlesCanva: {
-    position: 'absolute',
-    opacity: '0.3',
-    backgroundImage: `url(${bg}) `,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
+//material-ui
+
+import PropTypes from 'prop-types'
+import { withStyles, makeStyles } from '@material-ui/core/styles'
+
+import Card from '@material-ui/core/Card'
+import CardActionArea from '@material-ui/core/CardActionArea'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+
+const useStyles = makeStyles({
+  maxWidth: 345,
+
+  media: {
+    // ⚠️ object-fit is not supported by IE 11.
+    objectFit: 'cover',
   },
-}))
+  banner: {
+    position: 'relative',
+    color: 'yellow',
+    background: 'blue',
+  },
+})
 
-const Home = ({ children }) => {
+const Home = () => {
   const classes = useStyles()
-
   return (
     <>
       <Header />
+      <Card className={classes.card}>
+        <CardActionArea>
+          <CardMedia
+            component='img'
+            alt='Contemplative Reptile'
+            className={classes.media}
+            height='vh'
+            image={bg}
+            title='Contemplative Reptile'
+          />
 
-      <Particles
-        canvasClassName={classes.particlesCanva}
-        params={{
-          particles: {
-            number: {
-              value: 45,
-              density: {
-                enable: true,
-                value_area: 800,
-              },
-            },
-            shape: {
-              type: 'circle',
-              stroke: {
-                width: 1,
-                color: 'tomato',
-              },
-            },
-            size: {
-              value: 5,
-              random: true,
-              anim: {
-                enable: true,
-                speed: 5,
-                size_min: 0.1,
-                sync: true,
-              },
-            },
-            color: {
-              value: '#ff6699',
-            },
-            opacity: {
-              value: 1,
-              random: true,
-              anim: {
-                enable: true,
-                speed: 1,
-                opacity_min: 0.1,
-                sync: true,
-              },
-            },
-          },
-        }}
-      >
-        {children}
-      </Particles>
+          <CardContent>
+            <Typography gutterBottom variant='h5' component='h2'>
+              Lizard
+            </Typography>
+            <Typography variant='body2' color='textSecondary' component='p'>
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size='small' color='primary'>
+            Share
+          </Button>
+          <Button size='small' color='primary'>
+            Learn More
+          </Button>
+        </CardActions>
+      </Card>
+      <Resume />
     </>
   )
 }
-
 export default Home

@@ -4,7 +4,7 @@ import Typed from 'react-typed'
 
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'
-import { Avatar, Grid, Typography, Box } from '@material-ui/core'
+import { Avatar, Grid, Typography, Box, Paper } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   typedContainer: {
@@ -16,16 +16,51 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     zIndex: 1,
   },
+  banner: {
+    margin: '0 auto',
+    display: 'inline-block',
+    padding: '2rem 2rem 0.5rem 2rem',
+    background: 'rgba(0, 0, 0, 0.55)',
+  },
+  spand: {
+    fontSize: '.2em',
+    color: '#fff',
+    fontStyle: 'italic',
+    fontWeight: '300',
+    letterSpacing: ' 5px',
+    position: 'absolute',
+
+    top: '-20%',
+    right: '10%',
+    fontFamily: 'Playfair Display',
+  },
+  firtLetter: {
+    fontSize: '2em',
+    color: ' #fff',
+    fontFamily: 'Playfair Display',
+    paddingLeft: '2rem',
+  },
+
   avatar: {
     width: theme.spacing(20),
     height: theme.spacing(20),
     margin: theme.spacing(1),
   },
   title: {
-    color: 'var(--primaryColor)',
+    fontFamily: 'Playfair Display',
+    fontSize: '6em',
+    color: ' #fff',
+    textAlign: 'center',
+    fontStyle: 'italic',
+    fontWeight: '400',
+    position: 'relative',
+    letterSpacing: '3px',
+    lineHeight: '1.1em',
+    border: '1px solid #fff',
+    paddingRight: '7rem',
   },
   subtitle: {
-    color: 'var(--mainLava)',
+    color: 'var(--mainPink)',
 
     marginBottom: '3rem',
   },
@@ -34,16 +69,13 @@ const Header = () => {
   const classes = useStyles()
 
   return (
-    <Box className={classes.typedContainer}>
-      <Grid container justify='center'>
-        <Avatar className={classes.avatar} src={avatar} alt='avatar' />
-      </Grid>
-
-      <Typography className={classes.title} variant='h5'>
-        <Typed strings={['Mojgan Farmahini  ']} typeSpeed={40}></Typed>
+    <Box className={`${classes.typedContainer} ${classes.banner}`}>
+      <Typography className={`${classes.title} ${classes.paper} `} variant='h2'>
+        <span className={classes.firtLetter}>M</span>OJGAN
+        <span className={classes.spand}>System Developer</span>
       </Typography>
       <br />
-      <Typography className={classes.subtitle} variant='h4'>
+      <Typography className={classes.subtitle} variant='h5'>
         <Typed
           strings={[
             'System Developer- JAVA ',

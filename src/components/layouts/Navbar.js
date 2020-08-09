@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Route, NavLink, HashRouter } from 'react-router-dom'
 import avatar from '../../images/avatar.jpg'
 
 //material-ui
@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     width: 250,
     background: 'var(--mainPink)',
+
     height: '100%',
   },
   avatar: {
@@ -55,7 +56,7 @@ const menuItems = [
 const Navbar = () => {
   const classes = useStyles()
   const [state, setStae] = React.useState({
-    show: false,
+    show: true,
   })
 
   const toggleSlider = (slider, open) => () => {
