@@ -9,14 +9,16 @@ const useStyle = makeStyles((theme) => ({
     background: 'green',
   },
   timeLine: {
+    background: 'pink',
     position: 'relative',
     padding: '1rem',
     margin: '0 auto',
+
     '&:before': {
       content: "''",
       position: 'absolute',
       height: '100%',
-      border: '1px solid cyan',
+      border: '1px solid red',
       right: '40px',
       top: 0,
     },
@@ -25,6 +27,7 @@ const useStyle = makeStyles((theme) => ({
       display: 'table',
       clear: 'both',
     },
+
     [theme.breakpoints.up('md')]: {
       padding: '2rem',
       '&:before': {
@@ -34,6 +37,7 @@ const useStyle = makeStyles((theme) => ({
     },
   },
   timeLineItem: {
+    background: '#ccc',
     padding: '1rem',
     //??????
     borderBottom: '2px solid cyan',
@@ -56,7 +60,7 @@ const useStyle = makeStyles((theme) => ({
       transform: 'rotate(45deg)',
     },
     [theme.breakpoints.up('md')]: {
-      width: '44%',
+      width: '70%',
       margin: '1rem',
       '&:nth-of-type(2n)': {
         float: 'right',
@@ -85,6 +89,7 @@ const useStyle = makeStyles((theme) => ({
       display: 'none',
     },
     [theme.breakpoints.up('md')]: {
+      background: 'yellow',
       textAlign: 'center',
       margin: '0 auto',
       '&:nth-of-type(2n)': {

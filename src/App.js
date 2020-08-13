@@ -1,5 +1,4 @@
-import React from 'react'
-import { HashRouter, NavLink, Switch, Route } from 'react-router-dom'
+import React, { Profiler } from 'react'
 
 import './App.css'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -13,30 +12,14 @@ import Portfolio from './components/pages/Portfolio'
 
 function App() {
   return (
-    <>
+    <React.Fragment>
       <CssBaseline />
       <Navbar />
-
-      <Switch>
-        <Route exact path='/'>
-          {' '}
-          <Home />
-        </Route>
-
-        <Route exact path='/resume'>
-          {' '}
-          <Resume />
-        </Route>
-        <Route exact path='/contact'>
-          {' '}
-          <Contact />
-        </Route>
-        <Route exact path='/Portfolio'>
-          {' '}
-          <Portfolio />
-        </Route>
-      </Switch>
-    </>
+      <Home />
+      <Resume />
+      <Portfolio />
+      <Contact />
+    </React.Fragment>
   )
 }
 

@@ -13,10 +13,10 @@ const InputField = withStyles({
 
 const Contact = () => {
   return (
-    <Box component='div'>
-      <Grid cintainer justify='center'>
+    <Box component='div' id='contact'>
+      <Grid container justify='center'>
         <Box component='form'>
-          <Typography varient='h5' contact me></Typography>
+          <Typography varient='h5'>Contact me</Typography>
           <InputField fullWidth={true} lable='Name' variant='outlined' />
         </Box>
       </Grid>

@@ -1,113 +1,76 @@
 import React from 'react'
-import { Link, Route, NavLink, HashRouter } from 'react-router-dom'
+// import { NavHashLink as Link } from 'react-router-hash-link'
+import { Link, animateScroll as scroll } from 'react-scroll'
+
 import avatar from '../../images/avatar.jpg'
 
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'
-import Drawer from '@material-ui/core/Drawer'
 
 import {
   AppBar,
   Toolbar,
   ListItem,
   IconButton,
-  ListItemText,
   Avatar,
-  Divider,
-  List,
   Typography,
-  Box,
-  ListItemIcon,
 } from '@material-ui/core'
 
-import {
-  ArrowBackOutlined,
-  AssignmentInd,
-  Home,
-  Apps,
-  ContactMail,
-} from '@material-ui/icons'
+import { AssignmentInd, Home, Apps, ContactMail } from '@material-ui/icons'
 
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
-    width: 250,
-    background: 'var(--mainPink)',
+    flexGrow: 1,
+    position: 'sticky',
+    width: '100vw',
+    backgroundColor: 'var(--mainPink)',
+    zIndex: 1000,
+  },
+  menuToolbar: {
+    position: 'relative',
+  },
 
-    height: '100%',
-  },
-  avatar: {
-    display: 'block',
-    margin: '0.5rem auto',
-    width: theme.spacing(13),
-    height: theme.spacing(13),
-  },
   listItem: {
     color: 'var(--mainLava)',
   },
 }))
 
 const menuItems = [
-  { listIcon: <Home />, listText: 'Home', listPath: '/' },
-  { listIcon: <AssignmentInd />, listText: 'Skill', listPath: '/resume' },
-  { listIcon: <Apps />, listText: 'Portfolio', listPath: '/Portfolio' },
-  { listIcon: <ContactMail />, listText: 'Contacts', listPath: '/contact' },
+  { listIcon: <Home />, listText: 'Home', listPath: 'home' },
+  { listIcon: <AssignmentInd />, listText: 'Skill', listPath: 'resume' },
+  { listIcon: <Apps />, listText: 'Portfolio', listPath: 'portfolio' },
+  { listIcon: <ContactMail />, listText: 'Contacts', listPath: 'contact' },
 ]
 
 const Navbar = () => {
   const classes = useStyles()
-  const [state, setStae] = React.useState({
-    show: true,
-  })
+  // const scrollToTop = () => {
+  //   scroll.scrollToTop()
+  // }
 
-  const toggleSlider = (slider, open) => () => {
-    setStae({ ...state, [slider]: open })
-  }
-  const sliderList = (sideSlider) => {
-    return (
-      <Box
-        className={classes.menuSliderContainer}
-        component='div'
-        onClick={toggleSlider(sideSlider, false)}
-      >
-        <Avatar className={classes.avatar} src={avatar} alt='' />
-        <Divider />
-        <List>
-          {menuItems.map((item, index) => (
-            <ListItem key={index} component={Link} to={item.listPath}>
-              <ListItemIcon className={classes.listItem}>
-                {item.listIcon}
-              </ListItemIcon>
-              <ListItemText className={classes.listItem}>
-                {item.listText}
-              </ListItemText>
-            </ListItem>
-          ))}
-        </List>
-      </Box>
-    )
-  }
   return (
-    <>
-      <Box component='nav'>
-        <AppBar position='static' style={{ background: 'var(--mainPink)' }}>
-          <Toolbar>
-            <IconButton onClick={toggleSlider('show', true)}>
-              <ArrowBackOutlined style={{ color: 'green' }} />
+    <AppBar position='sticky' className={classes.menuSliderContainer}>
+      <Toolbar className={classes.menuToolbar}>
+        {menuItems.map((item, index) => (
+          <ListItem
+            key={index}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            component={Link}
+            to={item.listPath}
+          >
+            <IconButton className={classes.listItem}>
+              {item.listIcon}
             </IconButton>
-            <Typography style={{ color: 'var(--mainLava)' }} variant='h5'>
-              Portfolio
+            <Typography className={classes.listItem}>
+              {item.listText}
             </Typography>
-            <Drawer
-              open={state.show}
-              anchor='right'
-              onClick={toggleSlider('show', false)}
-            >
-              {sliderList('show')}
-            </Drawer>
-          </Toolbar>
-        </AppBar>
-      </Box>
-    </>
+          </ListItem>
+        ))}
+      </Toolbar>
+    </AppBar>
   )
 }
 

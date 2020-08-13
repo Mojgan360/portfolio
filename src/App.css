@@ -2,21 +2,29 @@
   --primaryColor: #a5907e;
   --mainWhite: #f7f7f7;
   --mainBlack: #222;
-  --mainGrey: #9e9e9e;
+  --mainGrey: #838e83;
   --mainPink: #f7dad9;
-  --mainLava: #443730;
-  --mainStyle: #2274a5;
+  --mainLava: #3c302a;
+  --mainStyle: #14bdeb;
+  --mainPurple: #7e5a9b;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
+/**
+7AE7C7
+B744B8 steel pink
+7E5A9B Royal purple
+/
 /* globals */
 body {
   padding-top: 0px;
   /* color: var(--darkGrey); */
   font-family: Verdana, Playfair Display, Geneva, Tahoma, sans-serif;
   line-height: 1.4;
+  /* overflow: hidden; */
+  scroll-behavior: smooth;
 }
 /* body {
   background: lightblue url(coffee-apple.jpg) no-repeat fixed center;
@@ -33,3 +41,104 @@ body {
   width: 100%;
   height: 100%;
 }
+
+/*******************
+*********************
+********************/
+
+.nav {
+  background-color: var(--mainPink);
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+}
+
+.nav-logo {
+  height: 60px;
+  width: 60px;
+}
+
+.nav-logo:hover {
+  cursor: pointer;
+}
+
+.nav .nav-content {
+  max-width: 900px;
+  padding: 0rem 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  display: inline;
+  margin-left: 2rem;
+  color: #333;
+}
+
+.nav-item:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.section {
+}
+
+.section-dark {
+  background: #333;
+  color: white;
+}
+
+.section-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/**********************ProgressBar**********************/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.mainProgress {
+  background-color: #f4f4f4;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.progress {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px 0;
+  height: 30px;
+  width: 300px;
+}
+
+.progress-done {
+  background: linear-gradient(to left, #f2709c, #ff9472);
+  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
+/**********************END ProgressBar**********************/

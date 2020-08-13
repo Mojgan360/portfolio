@@ -1,5 +1,4 @@
 import React from 'react'
-import Progress from '../layouts/ProgressBar'
 
 import { makeStyles } from '@material-ui/core/styles'
 import Card from '@material-ui/core/Card'
@@ -24,9 +23,7 @@ const useStyles = makeStyles({
 const Portfolio = () => {
   const classes = useStyles()
   return (
-    <>
-      <h1>React Progress Bar</h1>
-      <Progress done='70' />
+    <div id='portfolio'>
       <Box component='div' className={classes.mainContainer}>
         <Grid container justify='center'>
           {/* Project 1 */}
@@ -139,7 +136,7 @@ const Portfolio = () => {
           </Grid>
         </Grid>
       </Box>
-    </>
+    </div>
   )
 }
 

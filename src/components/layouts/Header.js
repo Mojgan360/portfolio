@@ -61,6 +61,7 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     color: 'var(--mainPink)',
+    fontFamily: 'Playfair Display',
 
     marginBottom: '3rem',
   },
@@ -69,26 +70,26 @@ const Header = () => {
   const classes = useStyles()
 
   return (
-    <Box className={`${classes.typedContainer} ${classes.banner}`}>
-      <Typography className={`${classes.title} ${classes.paper} `} variant='h2'>
-        <span className={classes.firtLetter}>M</span>OJGAN
-        <span className={classes.spand}>System Developer</span>
-      </Typography>
-      <br />
-      <Typography className={classes.subtitle} variant='h5'>
-        <Typed
-          strings={[
-            'System Developer- JAVA ',
-            'MERN Stack Developer',
-            'Front-End Developer',
-            'Web Developer ',
-          ]}
-          typeSpeed={40}
-          backSpeed={60}
-          loop
-        ></Typed>
-      </Typography>
-    </Box>
+    <Grid item xs={12} container>
+      <Box className={`${classes.typedContainer} ${classes.banner}`}>
+        <Typography
+          className={`${classes.title} ${classes.paper} `}
+          variant='h2'
+        >
+          <span className={classes.firtLetter}>M</span>OJGAN
+          <span className={classes.spand}>System Developer</span>
+        </Typography>
+        <br />
+        <Typography className={classes.subtitle} variant='h5'>
+          <Typed
+            strings={['I Want To Make Things That Make Difference']}
+            typeSpeed={80}
+            // backSpeed={60}
+            // loop
+          ></Typed>
+        </Typography>
+      </Box>
+    </Grid>
   )
 }
 
