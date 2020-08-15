@@ -2,8 +2,10 @@
   --primaryColor: #a5907e;
   --mainWhite: #f7f7f7;
   --mainBlack: #222;
+
   --mainGrey: #838e83;
   --mainPink: #f7dad9;
+  --LightPink: #fbefee;
   --mainLava: #3c302a;
   --mainStyle: #14bdeb;
   --mainPurple: #7e5a9b;
@@ -101,7 +103,7 @@ body {
 }
 
 /**********************ProgressBar**********************/
-
+/*
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 * {
@@ -140,5 +142,5 @@ body {
   width: 0;
   opacity: 0;
   transition: 1s ease 0.3s;
-}
+}*/
 /**********************END ProgressBar**********************/

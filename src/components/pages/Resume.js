@@ -1,15 +1,24 @@
 import React from 'react'
+import Title from '../layouts/Title'
+import Frontend from '../layouts/Frontend'
+import Backend from '../layouts/Backend'
+import Database from '../layouts/Database'
 
+import ProgressBar from '../layouts/MainProgressBar'
 //skill & Experience
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Box } from '@material-ui/core'
+import { Typography, Box, Grid } from '@material-ui/core'
+
 const useStyle = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+
   mainContainer: {
-    background: 'green',
+    background: 'var(--mainWhite)',
   },
   timeLine: {
-    background: 'pink',
     position: 'relative',
     padding: '1rem',
     margin: '0 auto',
@@ -18,7 +27,7 @@ const useStyle = makeStyles((theme) => ({
       content: "''",
       position: 'absolute',
       height: '100%',
-      border: '1px solid red',
+      border: '1px solid var(--primaryColor)',
       right: '40px',
       top: 0,
     },
@@ -37,12 +46,11 @@ const useStyle = makeStyles((theme) => ({
     },
   },
   timeLineItem: {
-    background: '#ccc',
+    // background: 'var(--mainBlack)',
     padding: '1rem',
-    //??????
-    borderBottom: '2px solid cyan',
+    // borderBottom: '2px solid var(--mainLava)',
     position: 'relative',
-    margin: '1rem 3rem 1rem 1rem',
+    margin: '1rem 1rem 1rem 1rem',
     clear: 'both',
     '&:after': {
       content: "''",
@@ -52,10 +60,12 @@ const useStyle = makeStyles((theme) => ({
       content: "''",
       position: 'absolute',
       right: '-0.625rem',
+      // left: '1rem',
       top: 'calc(50% - 5px)',
       borderStyle: 'solid',
       //??????
-      borderColor: 'var(--mainBlack) var(--mainBlack) transparent transparent',
+      borderColor:
+        'var(--mainLava) var(--primaryColor) transparent transparent',
       borderWidth: '0.625rem',
       transform: 'rotate(45deg)',
     },
@@ -72,24 +82,24 @@ const useStyle = makeStyles((theme) => ({
         right: 'auto',
         left: '-0.624rem',
         //???????
-        borderColor: 'transparent  transparent blue blue',
+        borderColor:
+          'transparent  transparent var(--mainLava) var(--primaryColor)',
       },
     },
   },
   timeLineYear: {
     textAlign: 'center',
-    maxWidth: '9.375rem',
+    maxWidth: '16rem',
     margin: '0 3rem 0 auto',
-    fontSize: '1.8rem',
-    background: 'var(--mainLava)',
-    color: 'var(--mainPink)',
+    fontSize: '1.3rem',
+    background: 'var(--primaryColor)',
+    color: 'var(--mainLava)',
     lineHeight: 1,
-    padding: '0.5rem 0 1rem',
+    padding: '0.5rem',
     '&:before': {
       display: 'none',
     },
     [theme.breakpoints.up('md')]: {
-      background: 'yellow',
       textAlign: 'center',
       margin: '0 auto',
       '&:nth-of-type(2n)': {
@@ -101,39 +111,107 @@ const useStyle = makeStyles((theme) => ({
       },
     },
   },
-  subHeading: {
-    color: 'var(--mainGrey)',
-    padding: '0',
-    textTransform: 'uppercase',
-  },
 }))
-const Resume = () => {
+const Resume = ({
+  percentage,
+  trackPathColor,
+  hollowBackgroundColor,
+  fontColor,
+  children,
+}) => {
   const classes = useStyle()
   return (
-    <>
-      <Box component='header' className={classes.mainContainer}>
-        <Typography varient='h4' align='center'>
-          Working Experience
-        </Typography>
+    <Box
+      id='resume'
+      component='div'
+      className={`${classes.mainContainer} ${classes.root}`}
+    >
+      <Title title='skills' center />
 
+      <Box component='header'>
         <Box component='div' className={classes.timeLine}>
+          {/* start of banner */}
           <Typography
             varient='h2'
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
-            2013
+            Front-end DEV
           </Typography>
-          <Box component='div' className={classes.timeLineItem}>
-            <Typography
-              variant='h5'
-              align='center'
-              className={classes.subHeading}
+          {/* end of banner */}
+          <Frontend />
+          {/* //// */}
+          {/* start of banner */}
+          <Typography
+            varient='h2'
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            Back -end DEV
+          </Typography>
+          {/* end of banner */}
+          {/* start contains */}
+          <Backend />
+          {/* //// */}
+        </Box>
+
+        <Box component='div' className={classes.timeLine}>
+          {/* start of banner */}
+
+          <Typography
+            varient='h2'
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            Database{' '}
+          </Typography>
+
+          {/* end of banner */}
+          {/* start contains */}
+          <Database />
+          {/* //// */}
+          <Typography
+            varient='h2'
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            To Know dev tools: git styles: material
+          </Typography>
+          {/* start contains */}
+          <Box
+            component='div'
+            // className={`${classes.root} `}
+            className={classes.timeLineItem}
+          >
+            <Grid
+              container
+              direction='row'
+              justify='space-evenly'
+              alignItems='center'
+              alignContent='center'
             >
-              Teaching and training Java{' '}
-            </Typography>
-            <Typography variant='body1' align='center'>
-              Java developer
-            </Typography>
+              {/* start */}
+              <Box
+                display='flex'
+                flexWrap='nowrap'
+                p={1}
+                m={1}
+                bgcolor='background.paper'
+                css={{ maxWidth: 160 }}
+              >
+                <Grid item xs={4}>
+                  <Typography variant='body1' align='center'>
+                    DevOps
+                  </Typography>
+                  <ProgressBar
+                    fontColor='white'
+                    trackWidth='10'
+                    percentage='60'
+                    trackPathColor='grey'
+                    trackBorderColor='grey'
+                    hollowBackgroundColor='#D7361D'
+                  />
+                </Grid>
+              </Box>
+              {/* end */}
+            </Grid>
+
             <Typography variant='subtitle1' align='center'>
               web Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
               sapiente praesentium, blanditiis id, officiis accusantium eius
@@ -142,33 +220,9 @@ const Resume = () => {
             </Typography>
           </Box>
           {/* //// */}
-          <Typography
-            varient='h2'
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            2015
-          </Typography>
-          <Box component='div' className={classes.timeLineItem}>
-            <Typography
-              variant='h5'
-              align='center'
-              className={classes.subHeading}
-            >
-              web designer
-            </Typography>
-            <Typography variant='body1' align='center'>
-              web designer
-            </Typography>
-            <Typography variant='subtitle1' align='center'>
-              web Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              sapiente praesentium, blanditiis id, officiis accusantium eius
-              repellendus reprehenderit optio velit cupiditate aut incidunt cum
-              alias sit ipsam quibusdam ullam repellat.
-            </Typography>
-          </Box>
         </Box>
       </Box>
-    </>
+    </Box>
   )
 }
 
