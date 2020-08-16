@@ -168,10 +168,6 @@ const Backend = ({
           </Card>
           {/* ************* End JS***************** */}
         </Grid>
-
-        <Typography variant='subtitle1' align='center'>
-          Redux, Hook material-ui, styled Components ,Bootsrap
-        </Typography>
       </Box>
     </>
   )

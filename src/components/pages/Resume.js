@@ -3,8 +3,8 @@ import Title from '../layouts/Title'
 import Frontend from '../layouts/Frontend'
 import Backend from '../layouts/Backend'
 import Database from '../layouts/Database'
+import DevOps from '../layouts/DevOps'
 
-import ProgressBar from '../layouts/MainProgressBar'
 //skill & Experience
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'
@@ -112,13 +112,7 @@ const useStyle = makeStyles((theme) => ({
     },
   },
 }))
-const Resume = ({
-  percentage,
-  trackPathColor,
-  hollowBackgroundColor,
-  fontColor,
-  children,
-}) => {
+const Resume = () => {
   const classes = useStyle()
   return (
     <Box
@@ -127,8 +121,9 @@ const Resume = ({
       className={`${classes.mainContainer} ${classes.root}`}
     >
       <Title title='skills' center />
-
+      {/* ******* Start Box-header******** */}
       <Box component='header'>
+        {/* ******* Start Box-TimeLine  1******** */}
         <Box component='div' className={classes.timeLine}>
           {/* start of banner */}
           <Typography
@@ -137,91 +132,73 @@ const Resume = ({
           >
             Front-end DEV
           </Typography>
-          {/* end of banner */}
+          {/* Start of Frontend */}
           <Frontend />
-          {/* //// */}
-          {/* start of banner */}
+          {/* End of Frontend */}
           <Typography
             varient='h2'
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
             Back -end DEV
           </Typography>
-          {/* end of banner */}
-          {/* start contains */}
+          {/* end of Backend */}
+          {/* start Backend */}
           <Backend />
-          {/* //// */}
+          {/* end contains */}
         </Box>
+        {/* *******  End of Box-TimeLine  1 ******** */}
 
+        {/* ******* Start Box-TimeLine  2 ******** */}
         <Box component='div' className={classes.timeLine}>
           {/* start of banner */}
-
           <Typography
             varient='h2'
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
-            Database{' '}
+            Database
           </Typography>
-
-          {/* end of banner */}
-          {/* start contains */}
+          {/* Start of Frontend */}
           <Database />
-          {/* //// */}
+          {/* End of Frontend */}
           <Typography
             varient='h2'
             className={`${classes.timeLineYear} ${classes.timeLineItem}`}
           >
-            To Know dev tools: git styles: material
+            DevOps
           </Typography>
-          {/* start contains */}
-          <Box
-            component='div'
-            // className={`${classes.root} `}
-            className={classes.timeLineItem}
-          >
-            <Grid
-              container
-              direction='row'
-              justify='space-evenly'
-              alignItems='center'
-              alignContent='center'
-            >
-              {/* start */}
-              <Box
-                display='flex'
-                flexWrap='nowrap'
-                p={1}
-                m={1}
-                bgcolor='background.paper'
-                css={{ maxWidth: 160 }}
-              >
-                <Grid item xs={4}>
-                  <Typography variant='body1' align='center'>
-                    DevOps
-                  </Typography>
-                  <ProgressBar
-                    fontColor='white'
-                    trackWidth='10'
-                    percentage='60'
-                    trackPathColor='grey'
-                    trackBorderColor='grey'
-                    hollowBackgroundColor='#D7361D'
-                  />
-                </Grid>
-              </Box>
-              {/* end */}
-            </Grid>
-
-            <Typography variant='subtitle1' align='center'>
-              web Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              sapiente praesentium, blanditiis id, officiis accusantium eius
-              repellendus reprehenderit optio velit cupiditate aut incidunt cum
-              alias sit ipsam quibusdam ullam repellat.
-            </Typography>
-          </Box>
-          {/* //// */}
+          {/* end of Backend */}
+          {/* start Backend */}
+          <Backend />
+          {/* end contains */}
         </Box>
+        {/* *******  End of Box-TimeLine  2 ******** */}
+
+        {/* ******* Start Box-TimeLine  2 ******** */}
+        <Box component='div' className={classes.timeLine}>
+          {/* start of banner */}
+          <Typography
+            varient='h2'
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            Others{' '}
+          </Typography>
+          {/* Start of Frontend */}
+          <Database />
+          {/* End of Frontend */}
+          <Typography
+            varient='h2'
+            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+          >
+            XXXXXXXX{' '}
+          </Typography>
+          {/* end of Backend */}
+          {/* start Backend */}
+          <Backend />
+          {/* end contains */}
+        </Box>
+        {/* *******  End of Box-TimeLine  3 ******** */}
       </Box>
+      {/* ******* end Box-header******** */}
     </Box>
   )
 }

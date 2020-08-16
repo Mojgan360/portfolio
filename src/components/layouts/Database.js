@@ -1,12 +1,8 @@
 import React from 'react'
 
 import ProgressBar from '../layouts/MainProgressBar'
-import htmlIcone from '../../images/html5.png'
-import jsIcone from '../../images/js.png'
 import mysqlIcone from '../../images/mysql.png'
-import cssIcone from '../../images/css.png'
 import mongoDb from '../../images/mongoDb.jpg'
-import webpackIcone from '../../images/webpack.png'
 
 //skill & Experience
 //material-ui
@@ -17,7 +13,6 @@ import Card from '@material-ui/core/Card'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent'
 import Avatar from '@material-ui/core/Avatar'
-import Typography from '@material-ui/core/Typography'
 
 const useStyle = makeStyles((theme) => ({
   root: {
@@ -173,10 +168,6 @@ const Database = ({
           </Card>
           {/* ************* End MySQL***************** */}
         </Grid>
-
-        <Typography variant='subtitle1' align='center'>
-          Redux, Hook material-ui, styled Components ,Bootsrap
-        </Typography>
       </Box>
     </>
   )

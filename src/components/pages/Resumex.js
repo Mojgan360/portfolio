@@ -161,16 +161,6 @@ const Resume = ({ id, percentage, hollowBackgroundColor, fontColor }) => {
           {/* End of Part 2- title */}
           {/* Start of Part 2- container */}
           <Box component='div' className={classes.timeLineItem}>
-            {/* <Typography
-              variant='h5'
-              align='center'
-              className={classes.subHeading}
-            >
-              web developer
-            </Typography> */}
-            {/* <Typography variant='body1' align='center'>
-              Java developer...
-            </Typography> */}
             <Grid container spacing={0} alignItems='center' justify='center'>
               <Grid item xs={6}>
                 <ProgressBar
