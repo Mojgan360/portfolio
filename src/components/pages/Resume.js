@@ -3,7 +3,7 @@ import Title from '../layouts/Title'
 import Frontend from '../layouts/Frontend'
 import Backend from '../layouts/Backend'
 import Database from '../layouts/Database'
-import DevOps from '../layouts/DevOps'
+// import DevOps from '../layouts/DevOps'
 
 //skill & Experience
 //material-ui

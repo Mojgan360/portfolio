@@ -1,7 +1,7 @@
 import React from 'react'
 
-const devOps = () => {
+const DevOps = () => {
   return <div>ddddd</div>
 }
 
-export default devOps
+export default DevOps
