@@ -1,10 +1,11 @@
 import React from 'react'
-import avatar from '../../images/avatar.jpg'
 import Typed from 'react-typed'
 
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'
-import { Avatar, Grid, Typography, Box, Paper } from '@material-ui/core'
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles((theme) => ({
   typedContainer: {

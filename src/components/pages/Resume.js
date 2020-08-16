@@ -8,7 +8,8 @@ import Database from '../layouts/Database'
 //skill & Experience
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Box, Grid } from '@material-ui/core'
+import Box from '@material-ui/core/Box'
+import Typography from '@material-ui/core/Typography'
 
 const useStyle = makeStyles((theme) => ({
   root: {

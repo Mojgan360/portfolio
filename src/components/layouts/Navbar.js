@@ -1,22 +1,19 @@
 import React from 'react'
-// import { NavHashLink as Link } from 'react-router-hash-link'
-import { Link, animateScroll as scroll } from 'react-scroll'
-
-import avatar from '../../images/avatar.jpg'
+import { Link } from 'react-scroll'
 
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'
 
-import {
-  AppBar,
-  Toolbar,
-  ListItem,
-  IconButton,
-  Avatar,
-  Typography,
-} from '@material-ui/core'
+import AppBar from '@material-ui/core/AppBar'
+import Typography from '@material-ui/core/Typography'
+import Toolbar from '@material-ui/core/Toolbar'
+import ListItem from '@material-ui/core/ListItem'
+import IconButton from '@material-ui/core/IconButton'
+import AssignmentInd from '@material-ui/icons/AssignmentInd'
 
-import { AssignmentInd, Home, Apps, ContactMail } from '@material-ui/icons'
+import Home from '@material-ui/icons/Home'
+import Apps from '@material-ui/icons/Apps'
+import ContactMail from '@material-ui/icons/ContactMail'
 
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
