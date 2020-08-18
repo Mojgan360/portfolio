@@ -9,6 +9,8 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import { Grid, Box } from '@material-ui/core'
+import Link from '@material-ui/core/Link'
+
 import img1 from '../../images/html-css-javascript.jpg'
 const useStyles = makeStyles({
   root: {
@@ -25,6 +27,8 @@ const useStyles = makeStyles({
 })
 const Portfolio = () => {
   const classes = useStyles()
+  const preventDefault = (event) => event.preventDefault()
+
   return (
     <div id='portfolio' className={classes.root}>
       <Box component='div' className={classes.mainContainer}>
@@ -131,9 +135,18 @@ const Portfolio = () => {
                 <Button size='small' color='primary'>
                   Share
                 </Button>
-                <Button size='small' color='primary'>
+                {/* //https://cleaning-service-demo.netlify.app */}
+                {/* <Button size='small' color='primary'>
                   Live Demo
-                </Button>
+
+                </Button> */}
+                <Link
+                  href='https://cleaning-service-demo.netlify.app'
+                  onClick={preventDefault}
+                  variant='body2'
+                >
+                  LIVE DEMOOOOOOOOOO
+                </Link>
               </CardActions>
             </Card>
           </Grid>

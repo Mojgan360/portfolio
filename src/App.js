@@ -7,8 +7,12 @@ import Navbar from './components/layouts/Navbar'
 
 import Home from './components/pages/Home'
 import Resume from './components/pages/Resume'
-import Contact from './components/pages/Contact'
+// import Contact from './components/pages/Contact'
 import Portfolio from './components/pages/Portfolio'
+import About from './components/pages/About'
+
+import Footer from './components/layouts/Footer'
+import PositionSe from './components/pages/PositionSe'
 
 function App() {
   return (
@@ -16,9 +20,13 @@ function App() {
       <CssBaseline />
       <Navbar />
       <Home />
+      <About />
       <Resume />
       <Portfolio />
-      <Contact />
+      {/* <Contact /> */}
+      <PositionSe />
+
+      <Footer />
     </React.Fragment>
   )
 }

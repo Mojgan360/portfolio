@@ -13,6 +13,8 @@ import AssignmentInd from '@material-ui/icons/AssignmentInd'
 
 import Home from '@material-ui/icons/Home'
 import Apps from '@material-ui/icons/Apps'
+import Face from '@material-ui/icons/Face'
+
 import ContactMail from '@material-ui/icons/ContactMail'
 
 const useStyles = makeStyles((theme) => ({
@@ -38,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 const menuItems = [
   { listIcon: <Home />, listText: 'Home', listPath: 'home' },
+  { listIcon: <Face />, listText: 'About', listPath: 'about' },
   { listIcon: <AssignmentInd />, listText: 'Skill', listPath: 'resume' },
   { listIcon: <Apps />, listText: 'Portfolio', listPath: 'portfolio' },
   { listIcon: <ContactMail />, listText: 'Contacts', listPath: 'contact' },
