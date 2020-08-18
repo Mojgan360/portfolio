@@ -11,6 +11,9 @@ import Typography from '@material-ui/core/Typography'
 import { Grid, Box } from '@material-ui/core'
 import Link from '@material-ui/core/Link'
 
+//
+import Title from '../layouts/Title'
+
 import img1 from '../../images/html-css-javascript.jpg'
 const useStyles = makeStyles({
   root: {
@@ -31,6 +34,7 @@ const Portfolio = () => {
 
   return (
     <div id='portfolio' className={classes.root}>
+      <Title title='My Works' center />
       <Box component='div' className={classes.mainContainer}>
         <Grid container justify='center'>
           {/* Project 1 */}
