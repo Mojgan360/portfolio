@@ -18,17 +18,21 @@ import ContactMail from '@material-ui/icons/ContactMail'
 const useStyles = makeStyles((theme) => ({
   menuSliderContainer: {
     flexGrow: 1,
-    position: 'sticky',
-    width: '100vw',
-    backgroundColor: 'var(--mainPink)',
+
     zIndex: 1000,
   },
   menuToolbar: {
-    position: 'relative',
+    width: '100vw',
+    backgroundColor: 'var(--mainPink)',
   },
 
   listItem: {
     color: 'var(--mainLava)',
+  },
+  menuText: {
+    [theme.breakpoints.down('xs')]: {
+      display: 'none',
+    },
   },
 }))
 
@@ -41,9 +45,6 @@ const menuItems = [
 
 const Navbar = () => {
   const classes = useStyles()
-  // const scrollToTop = () => {
-  //   scroll.scrollToTop()
-  // }
 
   return (
     <AppBar position='sticky' className={classes.menuSliderContainer}>
@@ -61,7 +62,7 @@ const Navbar = () => {
             <IconButton className={classes.listItem}>
               {item.listIcon}
             </IconButton>
-            <Typography className={classes.listItem}>
+            <Typography className={`${classes.listItem} ${classes.menuText}`}>
               {item.listText}
             </Typography>
           </ListItem>

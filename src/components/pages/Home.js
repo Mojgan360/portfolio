@@ -31,7 +31,7 @@ const Home = ({ children }) => {
             component='img'
             alt='Contemplative Reptile'
             className={classes.media}
-            height='vh'
+            height='100vh'
             image={bg}
             title='Contemplative Reptile'
           />

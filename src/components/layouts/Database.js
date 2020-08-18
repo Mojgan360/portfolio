@@ -19,8 +19,8 @@ const useStyle = makeStyles((theme) => ({
     flexGrow: 1,
     display: 'block',
     justifyContent: 'center',
-    maxWidth: 200,
-    margin: '0.5rem',
+    maxWidth: 190,
+    margin: '1rem',
 
     // background: 'var(--LightPink)',
   },

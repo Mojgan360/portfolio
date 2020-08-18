@@ -11,8 +11,11 @@ import Typography from '@material-ui/core/Typography'
 import { Grid, Box } from '@material-ui/core'
 import img1 from '../../images/html-css-javascript.jpg'
 const useStyles = makeStyles({
+  root: {
+    flexGrow: 1,
+  },
   mainContainer: {
-    background: 'var(--mainPrimary)',
+    backgroundColor: 'var(--mainPrimary)',
     height: '100%',
   },
   cardContainer: {
@@ -23,7 +26,7 @@ const useStyles = makeStyles({
 const Portfolio = () => {
   const classes = useStyles()
   return (
-    <div id='portfolio'>
+    <div id='portfolio' className={classes.root}>
       <Box component='div' className={classes.mainContainer}>
         <Grid container justify='center'>
           {/* Project 1 */}

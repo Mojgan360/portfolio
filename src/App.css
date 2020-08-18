@@ -6,9 +6,11 @@
   --mainGrey: #838e83;
   --mainPink: #f7dad9;
   --LightPink: #fbefee;
-  --mainLava: #3c302a;
+  /* --mainLava: #3c302a;   322F20*/
+  --mainLava: #23231a;
+
   --mainStyle: #14bdeb;
-  --mainPurple: #7e5a9b;
+  --mainPurple: #57467b;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
@@ -21,20 +23,19 @@ B744B8 steel pink
 /
 /* globals */
 body {
-  padding-top: 0px;
+  /* padding-top: 0px; */
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
   /* color: var(--darkGrey); */
   font-family: Verdana, Playfair Display, Geneva, Tahoma, sans-serif;
-  line-height: 1.4;
+  /* line-height: 1.4; */
+  line-height: calc(1.1em + 0.5vw);
   /* overflow: hidden; */
   scroll-behavior: smooth;
+  overflow: auto;
 }
-/* body {
-  background: lightblue url(coffee-apple.jpg) no-repeat fixed center;
-  -webkit-background: cover;
-  -moz-background: cover;
-  -o-background: cover;
-  background: cover;
-} */
+
 .dark-overlay {
   background-color: rgba(239, 188, 213, 0.5);
   position: absolute;
@@ -43,104 +44,3 @@ body {
   width: 100%;
   height: 100%;
 }
-
-/*******************
-*********************
-********************/
-
-.nav {
-  background-color: var(--mainPink);
-  position: sticky;
-  top: 0px;
-  width: 100%;
-  height: 80px;
-  z-index: 1000;
-  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
-}
-
-.nav-logo {
-  height: 60px;
-  width: 60px;
-}
-
-.nav-logo:hover {
-  cursor: pointer;
-}
-
-.nav .nav-content {
-  max-width: 900px;
-  padding: 0rem 3rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-.nav-item {
-  display: inline;
-  margin-left: 2rem;
-  color: #333;
-}
-
-.nav-item:hover {
-  color: black;
-  cursor: pointer;
-}
-
-.section {
-}
-
-.section-dark {
-  background: #333;
-  color: white;
-}
-
-.section-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-/**********************ProgressBar**********************/
-/*
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
-.mainProgress {
-  background-color: #f4f4f4;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.progress {
-  background-color: #d8d8d8;
-  border-radius: 20px;
-  position: relative;
-  margin: 15px 0;
-  height: 30px;
-  width: 300px;
-}
-
-.progress-done {
-  background: linear-gradient(to left, #f2709c, #ff9472);
-  box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-  border-radius: 20px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 0;
-  opacity: 0;
-  transition: 1s ease 0.3s;
-}*/
-/**********************END ProgressBar**********************/

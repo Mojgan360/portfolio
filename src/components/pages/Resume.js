@@ -3,7 +3,7 @@ import Title from '../layouts/Title'
 import Frontend from '../layouts/Frontend'
 import Backend from '../layouts/Backend'
 import Database from '../layouts/Database'
-// import DevOps from '../layouts/DevOps'
+import Others from '../layouts/Others'
 
 //skill & Experience
 //material-ui
@@ -28,7 +28,7 @@ const useStyle = makeStyles((theme) => ({
       content: "''",
       position: 'absolute',
       height: '100%',
-      border: '1px solid var(--primaryColor)',
+      border: '2px solid var(--primaryColor)',
       right: '40px',
       top: 0,
     },
@@ -47,9 +47,8 @@ const useStyle = makeStyles((theme) => ({
     },
   },
   timeLineItem: {
-    // background: 'var(--mainBlack)',
     padding: '1rem',
-    // borderBottom: '2px solid var(--mainLava)',
+    borderBottom: '2px solid var(--mainLava)',
     position: 'relative',
     margin: '1rem 1rem 1rem 1rem',
     clear: 'both',
@@ -61,7 +60,7 @@ const useStyle = makeStyles((theme) => ({
       content: "''",
       position: 'absolute',
       right: '-0.625rem',
-      // left: '1rem',
+      //left: '1rem',
       top: 'calc(50% - 5px)',
       borderStyle: 'solid',
       //??????
@@ -71,18 +70,16 @@ const useStyle = makeStyles((theme) => ({
       transform: 'rotate(45deg)',
     },
     [theme.breakpoints.up('md')]: {
-      width: '70%',
+      width: '60%',
       margin: '1rem',
       '&:nth-of-type(2n)': {
         float: 'right',
         margin: '1rem',
-        borderColor: 'cyan',
-        //???????
+        borderColor: 'var(--mainLava)',
       },
       '&:nth-of-type(2n):before': {
         right: 'auto',
         left: '-0.624rem',
-        //???????
         borderColor:
           'transparent  transparent var(--mainLava) var(--primaryColor)',
       },
@@ -93,10 +90,12 @@ const useStyle = makeStyles((theme) => ({
     maxWidth: '16rem',
     margin: '0 3rem 0 auto',
     fontSize: '1.3rem',
+    fontFamily: 'Playfair Display',
+
     background: 'var(--primaryColor)',
     color: 'var(--mainLava)',
     lineHeight: 1,
-    padding: '0.5rem',
+    padding: '1rem',
     '&:before': {
       display: 'none',
     },
@@ -116,91 +115,70 @@ const useStyle = makeStyles((theme) => ({
 const Resume = () => {
   const classes = useStyle()
   return (
-    <Box
-      id='resume'
-      component='div'
-      className={`${classes.mainContainer} ${classes.root}`}
-    >
-      <Title title='skills' center />
-      {/* ******* Start Box-header******** */}
-      <Box component='header'>
-        {/* ******* Start Box-TimeLine  1******** */}
-        <Box component='div' className={classes.timeLine}>
-          {/* start of banner */}
-          <Typography
-            varient='h2'
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            Front-end DEV
-          </Typography>
-          {/* Start of Frontend */}
-          <Frontend />
-          {/* End of Frontend */}
-          <Typography
-            varient='h2'
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            Back -end DEV
-          </Typography>
-          {/* end of Backend */}
-          {/* start Backend */}
-          <Backend />
-          {/* end contains */}
-        </Box>
-        {/* *******  End of Box-TimeLine  1 ******** */}
+    <div id='resume'>
+      <Box
+        component='div'
+        className={`${classes.mainContainer} ${classes.root}`}
+      >
+        <Title title='skills' center />
+        {/* ******* Start Box-header******** */}
+        <Box component='header'>
+          {/* ******* Start Box-TimeLine  1******** */}
+          <Box component='div' className={classes.timeLine}>
+            {/* start of banner */}
+            <Typography
+              varient='h2'
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+            >
+              Front-end DEV
+            </Typography>
+            {/* Start of Frontend */}
+            <Frontend />
+            {/* End of Frontend */}
+            <Typography
+              varient='h2'
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+            >
+              Back-end DEV
+            </Typography>
+            {/* end of Backend */}
+            {/* start Backend */}
+            <Backend />
+            {/* end contains */}
+          </Box>
+          {/* *******  End of Box-TimeLine  1 ******** */}
 
-        {/* ******* Start Box-TimeLine  2 ******** */}
-        <Box component='div' className={classes.timeLine}>
-          {/* start of banner */}
-          <Typography
-            varient='h2'
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            Database
-          </Typography>
-          {/* Start of Frontend */}
-          <Database />
-          {/* End of Frontend */}
-          <Typography
-            varient='h2'
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            DevOps
-          </Typography>
-          {/* end of Backend */}
-          {/* start Backend */}
-          <Backend />
-          {/* end contains */}
-        </Box>
-        {/* *******  End of Box-TimeLine  2 ******** */}
+          {/* ******* Start Box-TimeLine  2 ******** */}
+          <Box component='div' className={classes.timeLine}>
+            {/* start of banner */}
+            <Typography
+              varient='h2'
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+            >
+              Database
+            </Typography>
+            {/* Start of Frontend */}
+            <Database />
+            {/* End of Frontend */}
+            <Typography
+              varient='h2'
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+            >
+              Others
+            </Typography>
+            {/* end of Backend */}
+            {/* start Backend */}
+            <Others />
+            {/* end contains */}
+          </Box>
+          {/* *******  End of Box-TimeLine  2 ******** */}
 
-        {/* ******* Start Box-TimeLine  2 ******** */}
-        <Box component='div' className={classes.timeLine}>
-          {/* start of banner */}
-          <Typography
-            varient='h2'
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            Others{' '}
-          </Typography>
-          {/* Start of Frontend */}
-          <Database />
-          {/* End of Frontend */}
-          <Typography
-            varient='h2'
-            className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-          >
-            XXXXXXXX{' '}
-          </Typography>
-          {/* end of Backend */}
-          {/* start Backend */}
-          <Backend />
-          {/* end contains */}
+          {/* ******* Start Box-TimeLine  2 ******** */}
         </Box>
-        {/* *******  End of Box-TimeLine  3 ******** */}
+        {/* ******* end Box-header******** */}
+        <br />
       </Box>
-      {/* ******* end Box-header******** */}
-    </Box>
+    </div>
   )
 }
 

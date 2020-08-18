@@ -21,8 +21,8 @@ const MainProgressBar = ({
       hollowBackgroundColor={hollowBackgroundColor}
       defColor={{
         fair: 'orangered',
-        good: 'yellow',
-        excellent: 'green',
+        good: '#29f5bb',
+        excellent: '#08AF80',
         poor: 'red',
       }}
       //  scrollArea={myAppRef}

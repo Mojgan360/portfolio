@@ -1,12 +1,11 @@
 import React from 'react'
+
 import ProgressBar from '../layouts/MainProgressBar'
-import htmlIcone from '../../images/html5.png'
-import jsIcone from '../../images/js.png'
-import reactIcone from '../../images/ract-redux.png'
-import cssIcone from '../../images/css.png'
-import webpackIcone from '../../images/webpack.png'
-import expressIcone from '../../images/express.png'
-import materialUiIcone from '../../images/mateialui.png'
+import git from '../../images/git.png'
+import test from '../../images/test.jpg'
+import photoshop from '../../images/photoshop.png'
+
+import aws from '../../images/aws.png'
 
 //skill & Experience
 //material-ui
@@ -96,8 +95,7 @@ const useStyle = makeStyles((theme) => ({
     },
   },
 }))
-
-const Frontend = ({
+const Others = ({
   percentage,
   trackPathColor,
   hollowBackgroundColor,
@@ -117,18 +115,14 @@ const Frontend = ({
           alignItems='center'
           alignContent='center'
         >
-          {/* ************* Start HTML***************** */}
+          {/* ************* Start AWS***************** */}
           <Card className={classes.root}>
             <CardHeader
               avatar={
-                <Avatar
-                  variant='square'
-                  src={htmlIcone}
-                  className={classes.avatar}
-                />
+                <Avatar variant='square' src={aws} className={classes.avatar} />
               }
-              title='HTML'
-              // subheader='HTML5'
+              title='AWS'
+              subheader='DevOps'
             />
 
             <CardContent>
@@ -136,81 +130,22 @@ const Frontend = ({
                 className={classes.progress}
                 fontColor='var(--mainWhite)'
                 trackWidth='10'
-                percentage='90'
+                percentage='50'
                 trackPathColor='var(--mainWhite)'
                 trackBorderColor='var(--LightPink)'
-                hollowBackgroundColor='#F85138'
+                hollowBackgroundColor='#F5992F'
               />
             </CardContent>
           </Card>
-          {/* ************* End HTML***************** */}
-          {/* ************* Start CSS***************** */}
+          {/* ************* End AWS***************** */}
+          {/* ************* Start GitHub***************** */}
           <Card className={classes.root}>
             <CardHeader
               avatar={
-                <Avatar
-                  variant='square'
-                  src={cssIcone}
-                  className={classes.avatar}
-                />
+                <Avatar variant='square' src={git} className={classes.avatar} />
               }
-              title='CSS'
-              // subheader='CSS3'
-            />
-
-            <CardContent>
-              <ProgressBar
-                className={classes.progress}
-                fontColor='var(--mainWhite)'
-                trackWidth='10'
-                percentage='90'
-                trackPathColor='var(--mainWhite)'
-                trackBorderColor='var(--LightPink)'
-                hollowBackgroundColor='#2C98F0'
-              />
-            </CardContent>
-          </Card>
-          {/* ************* End CSS***************** */}
-          {/* ************* Start JS***************** */}
-          <Card className={classes.root}>
-            <CardHeader
-              avatar={
-                <Avatar
-                  variant='square'
-                  src={jsIcone}
-                  aria-label='recipe'
-                  className={classes.avatar}
-                />
-              }
-              title='JavaScript'
-              // subheader=''
-            />
-
-            <CardContent>
-              <ProgressBar
-                className={classes.progress}
-                fontColor='var(--mainWhite)'
-                trackWidth='10'
-                percentage='85'
-                trackPathColor='var(--mainWhite)'
-                trackBorderColor='var(--LightPink)'
-                hollowBackgroundColor='#E8C954'
-              />
-            </CardContent>
-          </Card>
-          {/* ************* End JS***************** */}
-          {/* ************* Start React***************** */}
-          <Card className={classes.root}>
-            <CardHeader
-              avatar={
-                <Avatar
-                  variant='square'
-                  src={reactIcone}
-                  className={classes.avatar}
-                />
-              }
-              title='React'
-              subheader='Redux, Hooks'
+              title='Git'
+              subheader='Github'
             />
 
             <CardContent>
@@ -221,24 +156,23 @@ const Frontend = ({
                 percentage='80'
                 trackPathColor='var(--mainWhite)'
                 trackBorderColor='var(--LightPink)'
-                hollowBackgroundColor='#6BDCF9'
+                hollowBackgroundColor='#EE512F'
               />
             </CardContent>
           </Card>
-          {/* ************* End React***************** */}
-          {/* ************* Start webpack***************** */}
+          {/* ************* End GitHub***************** */}
+          {/* ************* Start Test***************** */}
           <Card className={classes.root}>
             <CardHeader
               avatar={
                 <Avatar
                   variant='square'
-                  src={webpackIcone}
-                  aria-label='recipe'
+                  src={test}
                   className={classes.avatar}
                 />
               }
-              title='webpack'
-              subheader='Build Tools'
+              title='Testing'
+              // subheader='Github'
             />
 
             <CardContent>
@@ -246,26 +180,26 @@ const Frontend = ({
                 className={classes.progress}
                 fontColor='var(--mainWhite)'
                 trackWidth='10'
-                percentage='80'
+                percentage='50'
                 trackPathColor='var(--mainWhite)'
                 trackBorderColor='var(--LightPink)'
-                hollowBackgroundColor='#247ABE'
+                hollowBackgroundColor='#F30D35'
               />
             </CardContent>
           </Card>
-          {/* ************* End webpack***************** */}
-          {/* ************* Start express***************** */}
+          {/* ************* End Test***************** */}
+          {/* ************* Start Photoshop***************** */}
           <Card className={classes.root}>
             <CardHeader
               avatar={
                 <Avatar
                   variant='square'
-                  src={expressIcone}
+                  src={photoshop}
                   className={classes.avatar}
                 />
               }
-              title='Express.js'
-              // subheader='Express.js'
+              title='Photoshop'
+              // subheader='Github'
             />
 
             <CardContent>
@@ -273,45 +207,18 @@ const Frontend = ({
                 className={classes.progress}
                 fontColor='var(--mainWhite)'
                 trackWidth='10'
-                percentage='80'
+                percentage='55'
                 trackPathColor='var(--mainWhite)'
                 trackBorderColor='var(--LightPink)'
-                hollowBackgroundColor='#828282'
+                hollowBackgroundColor='#011F35'
               />
             </CardContent>
           </Card>
-          {/* ************* End express***************** */}
-          {/* ************* Start Material-UI***************** */}
-          <Card className={classes.root}>
-            <CardHeader
-              avatar={
-                <Avatar
-                  variant='square'
-                  src={materialUiIcone}
-                  className={classes.avatar}
-                />
-              }
-              title='Material-UI'
-              subheader='Styles'
-            />
-
-            <CardContent>
-              <ProgressBar
-                className={classes.progress}
-                fontColor='var(--mainWhite)'
-                trackWidth='10'
-                percentage='90'
-                trackPathColor='var(--mainWhite)'
-                trackBorderColor='var(--LightPink)'
-                hollowBackgroundColor='#2C98F0'
-              />
-            </CardContent>
-          </Card>
-          {/* ************* End Material-UI***************** */}
+          {/* ************* End Photoshop***************** */}
         </Grid>
       </Box>
     </>
   )
 }
 
-export default Frontend
+export default Others
