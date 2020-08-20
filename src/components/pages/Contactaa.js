@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { css } from 'styled-components'
+// import { css } from 'styled-components'
+import Avatar from '@material-ui/core/Avatar'
 
 const Contact = () => {
   return (

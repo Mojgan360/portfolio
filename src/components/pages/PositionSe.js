@@ -1,12 +1,10 @@
 import React from 'react'
 import Title from '../layouts/Title'
 import { withStyles, makeStyles } from '@material-ui/core/styles'
-
 import { TextField, Grid, Typography, Box, Button } from '@material-ui/core'
-
 import Link from '@material-ui/core/Link'
-
 import SendIcon from '@material-ui/icons/Send'
+import bg from '../../images/bg.jpg'
 
 //CSS
 const useStyles = makeStyles((theme) => ({
@@ -16,6 +14,15 @@ const useStyles = makeStyles((theme) => ({
     left: '10%',
     position: 'relative',
     marginTop: theme.spacing(8),
+  },
+  main: {
+    height: 800,
+    backgroundImage: `url(${bg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    width: `calc(100vw + 48px)`,
+    margin: -24,
+    padding: 24,
   },
   contactForm: {
     position: 'absolute',
@@ -57,84 +64,100 @@ const InputField = withStyles({
     },
   },
 })(TextField)
-
+const styles = {
+  heroContainer: {
+    backgroundImage: `url(${bg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    background:
+      ' linear-gradient(to bottom, rgba(247,218,217,0.5), rgba(35,35,26,0.5))',
+    width: `calc(100vw + 48px)`,
+    margin: -24,
+    padding: 24,
+  },
+}
 const PositionSe = () => {
   const classes = useStyles()
 
   return (
-    <Grid
-      item
-      xs={10}
-      container
-      spacing={3}
-      id='contact'
-      className={classes.root}
-    >
-      <Title title='Contact Me' />
-
-      <Box
-        className={classes.paper}
-        component='form'
-        action='https://formspree.io/mojgan360@gmail.com'
-        method='POST'
+    <div>
+      <Grid
+        item
+        xs={10}
+        container
+        spacing={3}
+        id='contact'
+        className={classes.root}
+        direction='column'
+        justify='flex-end'
+        alignItems='right'
+        style={styles.heroContainer}
       >
-        <Typography varient='h5' className={classes.textStyle}>
-          {' '}
-          I am interested in freelance opportunities - especially ambitious or
-          large projects. However, if you have other request or question, don't
-          hesitate me using the below form either or <br />
-          <Link>mojgan360@gmail.com</Link>
-        </Typography>
-        <hr />
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
-            <InputField
-              type='text'
-              name='name'
-              fullWidth={true}
-              label='Name'
-              variant='outlined'
-              margin='dense'
-              size='medium'
-              inputProps={{ style: { color: 'var(--mainStyle)' } }}
-            />
+        <Title title='Contact Me' />
+        <Box
+          className={classes.paper}
+          component='form'
+          action='https://formspree.io/mojgan360@gmail.com'
+          method='POST'
+        >
+          <Typography varient='h5' className={classes.textStyle}>
+            {' '}
+            I am interested in freelance opportunities - especially ambitious or
+            large projects. However, if you have other request or question,
+            don't hesitate me using the below form either or <br />
+            <Link>mojgan360@gmail.com</Link>
+          </Typography>
+          <hr />
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <InputField
+                type='text'
+                name='name'
+                fullWidth={true}
+                label='Name'
+                variant='outlined'
+                margin='dense'
+                size='medium'
+                inputProps={{ style: { color: 'var(--mainStyle)' } }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <InputField
+                type='email'
+                name='_replyto'
+                fullWidth={true}
+                label='Email'
+                variant='outlined'
+                margin='dense'
+                size='medium'
+                inputProps={{ style: { color: 'var(--mainStyle)' } }}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <InputField
+                type='text'
+                name='message'
+                fullWidth={true}
+                label='Message'
+                variant='outlined'
+                margin='dense'
+                size='medium'
+                inputProps={{ style: { color: 'var(--mainStyle)' } }}
+              />
+              <Button
+                className={classes.button}
+                variant='outlined'
+                fullWidth={true}
+                endIcon={<SendIcon />}
+                type='submit'
+              >
+                Contact Me
+              </Button>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <InputField
-              type='email'
-              name='_replyto'
-              fullWidth={true}
-              label='Email'
-              variant='outlined'
-              margin='dense'
-              size='medium'
-              inputProps={{ style: { color: 'var(--mainStyle)' } }}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <InputField
-              type='text'
-              name='message'
-              fullWidth={true}
-              label='Message'
-              variant='outlined'
-              margin='dense'
-              size='medium'
-              inputProps={{ style: { color: 'var(--mainStyle)' } }}
-            />
-            <Button
-              className={classes.button}
-              variant='outlined'
-              fullWidth={true}
-              endIcon={<SendIcon />}
-              type='submit'
-            >
-              Contact Me
-            </Button>
-          </Grid>
-        </Grid>
-      </Box>
-    </Grid>
+        </Box>
+      </Grid>
+    </div>
   )
 }
 
