@@ -9,15 +9,17 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import { Grid, Box } from '@material-ui/core'
-import Link from '@material-ui/core/Link'
 
 //
 import Title from '../layouts/Title'
+import merciapp from '../../images/merciapp.png'
+import devtodev from '../../images/devtodev.png'
+import ciccishop from '../../images/ciccishop.png'
 
-import img1 from '../../images/html-css-javascript.jpg'
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
+    height: '100%',
   },
   mainContainer: {
     backgroundColor: 'var(--mainPrimary)',
@@ -26,11 +28,14 @@ const useStyles = makeStyles({
   cardContainer: {
     maxWidth: 345,
     margin: '5rem auto',
+    //
+    display: 'inline - block',
+    position: 'relative',
+    cursor: 'pointer',
   },
 })
 const Portfolio = () => {
   const classes = useStyles()
-  const preventDefault = (event) => event.preventDefault()
 
   return (
     <div id='portfolio' className={classes.root}>
@@ -44,30 +49,37 @@ const Portfolio = () => {
                 <CardMedia
                   component='img'
                   alt='Contemplative Reptile'
-                  height='140'
-                  image={img1}
-                  title='Contemplative Reptile'
-                />
+                  height='220'
+                  image={devtodev}
+                  title='MERN'
+                ></CardMedia>
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Lizard
+                    DevToDev App
                   </Typography>
                   <Typography
                     variant='body2'
                     color='textSecondary'
                     component='p'
                   >
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    An app for developers where they can share comments, and
+                    share experiences for help together.
+                  </Typography>
+                  <Typography
+                    variant='subtitle1'
+                    color='textSecondary'
+                    component='p'
+                  >
+                    <br /> MERN: MongoDb, Express, React, Node
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size='small' color='primary'>
-                  Share
-                </Button>
-                <Button size='small' color='primary'>
+                <Button
+                  href='https://merciapp.herokuapp.com/'
+                  size='small'
+                  color='primary'
+                >
                   Live Demo
                 </Button>
               </CardActions>
@@ -80,30 +92,39 @@ const Portfolio = () => {
                 <CardMedia
                   component='img'
                   alt='Contemplative Reptile'
-                  height='140'
-                  image={img1}
+                  height='220'
+                  image={merciapp}
                   title='Contemplative Reptile'
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Lizard
+                    Merci App
                   </Typography>
                   <Typography
                     variant='body2'
                     color='textSecondary'
                     component='p'
                   >
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    It's time for our pets to have their instagram account, and
+                    share happiness through their nice pics, just create an
+                    account, follow other pets account, see nice pictures and
+                    have a great day!
+                  </Typography>
+                  <Typography
+                    variant='subtitle1'
+                    color='textSecondary'
+                    component='p'
+                  >
+                    <br /> MERN: MongoDb, Express, React, Node
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size='small' color='primary'>
-                  Share
-                </Button>
-                <Button size='small' color='primary'>
+                <Button
+                  href='https://merciapp.herokuapp.com/'
+                  size='small'
+                  color='primary'
+                >
                   Live Demo
                 </Button>
               </CardActions>
@@ -116,41 +137,40 @@ const Portfolio = () => {
                 <CardMedia
                   component='img'
                   alt='Contemplative Reptile'
-                  height='140'
-                  image={img1}
+                  height='220'
+                  image={ciccishop}
                   title='Contemplative Reptile'
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Lizard
+                    Cicci-shop App
                   </Typography>
                   <Typography
                     variant='body2'
                     color='textSecondary'
                     component='p'
                   >
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
+                    A tech store app, Frontend: JavScript, React, Redux, HTML,
+                    CSS
+                  </Typography>
+                  <Typography
+                    variant='subtitle1'
+                    color='textSecondary'
+                    component='p'
+                  >
+                    <br />
+                    Frontend: JavScript, React, Redux, HTML, CSS
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size='small' color='primary'>
-                  Share
-                </Button>
-                {/* //https://cleaning-service-demo.netlify.app */}
-                {/* <Button size='small' color='primary'>
-                  Live Demo
-
-                </Button> */}
-                <Link
-                  href='https://cleaning-service-demo.netlify.app'
-                  onClick={preventDefault}
-                  variant='body2'
+                <Button
+                  href='https://cicci-shop.netlify.app'
+                  size='small'
+                  color='primary'
                 >
-                  LIVE DEMOOOOOOOOOO
-                </Link>
+                  Live Demo
+                </Button>
               </CardActions>
             </Card>
           </Grid>

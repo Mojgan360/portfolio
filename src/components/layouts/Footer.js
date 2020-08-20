@@ -19,8 +19,8 @@ function Copyright() {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>
       {'Copyright © '}
-      <Link color='inherit' href='https://material-ui.com/'>
-        Your Website
+      <Link color='inherit' href='https://mojgan.netlify.com/'>
+        Mojgan Farmahini
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -33,16 +33,13 @@ const Footer = () => {
   return (
     <div>
       <footer className={classes.footer}>
-        <Typography variant='h6' align='center' gutterBottom>
-          Footer
-        </Typography>
         <Typography
           variant='subtitle1'
           align='center'
           color='textSecondary'
           component='p'
         >
-          Something here to give the footer a purpose!
+          Thanks for visiting my page.
         </Typography>
         <Copyright />
       </footer>

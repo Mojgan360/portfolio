@@ -60,7 +60,7 @@ const Contact = () => {
 
   return (
     <Box component='div' id='contact' className={classes.root}>
-      <Title title='Contact me' center />
+      <Title title='Contact Me' center />
 
       <Grid
         item

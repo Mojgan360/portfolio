@@ -8,7 +8,6 @@ import Link from '@material-ui/core/Link'
 
 import SendIcon from '@material-ui/icons/Send'
 
-//
 //CSS
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     width: '60%',
     left: '10%',
     position: 'relative',
-    border: 'solid 5px #ff55aa',
     marginTop: theme.spacing(8),
   },
   contactForm: {
@@ -35,10 +33,6 @@ const useStyles = makeStyles((theme) => ({
   },
   textStyle: {
     margin: '3rem',
-  },
-  paper: {
-    // padding: theme.spacing(2),
-    // textAlign: 'center',
   },
 }))
 
@@ -76,7 +70,7 @@ const PositionSe = () => {
       id='contact'
       className={classes.root}
     >
-      <Title title='Contact me' center />
+      <Title title='Contact Me' />
 
       <Box
         className={classes.paper}
@@ -145,21 +139,3 @@ const PositionSe = () => {
 }
 
 export default PositionSe
-
-//***** Other solution with Styled-componet
-// const StyledTextField = styled(TextField)`
-//   label.focused {
-//     color: green;
-//   }
-//   .MuiOutlinedInput-root {
-//     fieldset {
-//       border-color: red;
-//     }
-//     &:hover fieldset {
-//       border-color: yellow;
-//     }
-//     &.Mui-focused fieldset {
-//       border-color: green;
-//     }
-//   }
-// `;

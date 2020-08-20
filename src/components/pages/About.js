@@ -1,10 +1,10 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
-
 import Grid from '@material-ui/core/Grid'
 import Avatar from '@material-ui/core/Avatar'
-import bonjo from '../../images//avatar.png'
+import bonjo from '../../images/avatar.png'
+
 import Title from '../layouts/Title'
 
 const useStyles = makeStyles((theme) => ({
@@ -17,11 +17,16 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     color: theme.palette.text.secondary,
     fontFamily: 'Playfair Display',
+    marginBottom: '6rem',
   },
-  avatar: {
-    objectFit: 'cover',
-    height: ' 55vh',
+  contains: {},
+  media: {
+    position: 'relative',
     width: '100vw',
+    height: '100%',
+    padding: '0 1.5rem 0 1.5rem',
+    top: 0,
+    left: 0,
   },
 }))
 
@@ -29,11 +34,12 @@ const About = () => {
   const classes = useStyles()
 
   return (
+    // <Container maxWidth='fixed' className={classes.root}>
     <div className={classes.root} id='about'>
       <Title title='about me' center />
       <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Avatar src={bonjo} variant='square' className={classes.avatar} />
+        <Grid item md={6}>
+          <Avatar src={bonjo} variant='square' className={classes.media} />
         </Grid>
 
         <Grid item xs={12} sm={10}>
