@@ -150,7 +150,7 @@ const Portfolio = () => {
                     color='textSecondary'
                     component='p'
                   >
-                    A tech store app, Frontend: JavScript, React, Redux, HTML,
+                    A tech store app, Frontend: JavaScript, React, Redux, HTML,
                     CSS
                   </Typography>
                   <Typography
