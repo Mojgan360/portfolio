@@ -68,18 +68,7 @@ const InputField = withStyles({
     },
   },
 })(TextField)
-const styles = {
-  heroContainer: {
-    backgroundImage: `url(${bg})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    background:
-      ' linear-gradient(to bottom, rgba(247,218,217,0.5), rgba(35,35,26,0.5))',
-    width: `calc(100vw + 48px)`,
-    margin: -24,
-    padding: 24,
-  },
-}
+
 const PositionSe = () => {
   const classes = useStyles()
 
@@ -93,10 +82,6 @@ const PositionSe = () => {
         spacing={3}
         id='contact'
         className={classes.root}
-        direction='column'
-        justify='flex-end'
-        alignItems='right'
-        style={styles.heroContainer}
       >
         <Box
           className={classes.paper}
