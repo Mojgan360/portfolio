@@ -6,7 +6,7 @@ import Link from '@material-ui/core/Link'
 import SendIcon from '@material-ui/icons/Send'
 import bg from '../../images/bg.jpg'
 
-//CSS
+//CSS.
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '60%',
