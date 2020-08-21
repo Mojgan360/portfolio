@@ -45,10 +45,11 @@ const About = () => {
           {' '}
           <Typography variant='h5' className={classes.paper}>
             {' '}
-            I am a full-stack developer who is passionate with interface design.
-            My interests range from back-side, front-end, system management to
-            mobile applications. As you can see, I am interested in all parts of
-            application development. Now I am focusing on MERN stack.
+            I am a full-stack developer who is passionate about interface
+            design. My interests range from back-side, front-end, system
+            management to mobile applications. As you can see, I am interested
+            in all parts of application development. Now I am focusing on MERN
+            stack.
           </Typography>
         </Grid>
       </Grid>
