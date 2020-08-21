@@ -40,6 +40,10 @@ const useStyles = makeStyles((theme) => ({
   },
   textStyle: {
     margin: '3rem',
+    textAlign: 'left',
+    color: theme.palette.text.secondary,
+    fontFamily: 'Playfair Display',
+    marginBottom: '6rem',
   },
 }))
 
@@ -81,6 +85,7 @@ const PositionSe = () => {
 
   return (
     <div>
+      <Title title='Contact Me' center />
       <Grid
         item
         xs={10}
@@ -93,7 +98,6 @@ const PositionSe = () => {
         alignItems='right'
         style={styles.heroContainer}
       >
-        <Title title='Contact Me' />
         <Box
           className={classes.paper}
           component='form'

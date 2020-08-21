@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   media: {
     position: 'relative',
     width: '100vw',
-    height: '100%',
+    height: '95%',
     padding: '0 1.5rem 0 1.5rem',
     top: 0,
     left: 0,
