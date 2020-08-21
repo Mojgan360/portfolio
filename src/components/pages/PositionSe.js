@@ -72,7 +72,7 @@ const PositionSe = () => {
   const classes = useStyles()
 
   return (
-    <div>
+    <>
       <Title title='Contact Me' center />
       <Grid
         item
@@ -145,7 +145,7 @@ const PositionSe = () => {
           </Grid>
         </Box>
       </Grid>
-    </div>
+    </>
   )
 }
 

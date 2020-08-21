@@ -9,14 +9,10 @@ import Grid from '@material-ui/core/Grid'
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'static',
-    // height: '90%',
-    // left: 0,
-    // top: 0,
   },
   typedContainer: {
     position: 'absolute',
     top: '60%',
-    // right: '1%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '100vm',
@@ -24,8 +20,6 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1,
   },
   banner: {
-    //margin: '0 auto',
-    // display: 'inline-block',
     padding: '2rem 2rem 0.5rem 2rem',
     background: 'rgba(0, 0, 0, 0.55)',
   },
@@ -42,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Playfair Display',
     [theme.breakpoints.down('xs')]: {
       letterSpacing: ' 1px',
-      // backgroundColor: 'blue',
       fontSize: '1rem',
     },
     [theme.breakpoints.up('sm')]: {
@@ -79,7 +72,6 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid #fff',
 
     [theme.breakpoints.down('xs')]: {
-      // backgroundColor: theme.palette.secondary.main,
       backgroundColor: 'var(--primaryColor)',
       fontSize: '3.5em',
     },
@@ -119,8 +111,6 @@ const Header = () => {
             <Typed
               strings={['I Want To Make Things That Make Difference']}
               typeSpeed={80}
-              // backSpeed={60}
-              // loop
             ></Typed>
           </Typography>
         </Grid>

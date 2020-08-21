@@ -1,15 +1,9 @@
 import React from 'react'
 
 import ProgressBar from '../layouts/MainProgressBar'
-import htmlIcone from '../../images/html5.png'
-import jsIcone from '../../images/js.png'
 import mysqlIcone from '../../images/mysql.png'
-import cssIcone from '../../images/css.png'
 import mongoDb from '../../images/mongoDb.jpg'
-import webpackIcone from '../../images/webpack.png'
 
-//skill & Experience
-//material-ui
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
@@ -26,14 +20,11 @@ const useStyle = makeStyles((theme) => ({
     justifyContent: 'center',
     maxWidth: 200,
     margin: '0.5rem',
-
-    // background: 'var(--LightPink)',
   },
 
   timeLineItem: {
     background: 'var(--mainWhite)',
     padding: '1rem',
-    // borderBottom: '2px solid var(--mainLava)',
     position: 'relative',
     margin: '1rem 1rem 1rem 1rem',
     clear: 'both',
@@ -45,10 +36,8 @@ const useStyle = makeStyles((theme) => ({
       content: "''",
       position: 'absolute',
       right: '-0.625rem',
-      // left: '1rem',
       top: 'calc(50% - 5px)',
       borderStyle: 'solid',
-      //??????
       borderColor:
         'var(--mainPink) var(--primaryColor) transparent transparent',
       borderWidth: '0.625rem',
@@ -61,12 +50,10 @@ const useStyle = makeStyles((theme) => ({
         float: 'right',
         margin: '1rem',
         borderColor: 'cyan',
-        //???????
       },
       '&:nth-of-type(2n):before': {
         right: 'auto',
         left: '-0.624rem',
-        //???????
         borderColor:
           'transparent  transparent var(--mainPink) var(--primaryColor)',
       },
@@ -109,7 +96,6 @@ const Styles = ({
 
   return (
     <>
-      {/* start contains */}
       <Box component='div' className={classes.timeLineItem}>
         <Grid
           container
@@ -118,7 +104,6 @@ const Styles = ({
           alignItems='center'
           alignContent='center'
         >
-          {/* ************* Start MongoDB***************** */}
           <Card className={classes.root}>
             <CardHeader
               avatar={
@@ -129,7 +114,6 @@ const Styles = ({
                 />
               }
               title='MongoDB'
-              // subheader='HTML5'
             />
 
             <CardContent>
@@ -144,8 +128,7 @@ const Styles = ({
               />
             </CardContent>
           </Card>
-          {/* ************* End monboDb***************** */}
-          {/* ************* Start mySql***************** */}
+
           <Card className={classes.root}>
             <CardHeader
               avatar={
@@ -156,7 +139,6 @@ const Styles = ({
                 />
               }
               title='MySQL'
-              // subheader=''
             />
 
             <CardContent>
@@ -171,7 +153,6 @@ const Styles = ({
               />
             </CardContent>
           </Card>
-          {/* ************* End MySQL***************** */}
         </Grid>
 
         <Typography variant='subtitle1' align='center'>

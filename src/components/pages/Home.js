@@ -2,8 +2,6 @@ import React from 'react'
 import bg from '../../images/bg-gray.jpg'
 import Header from '../layouts/Header'
 
-//material-ui
-
 import { makeStyles } from '@material-ui/core/styles'
 
 import Card from '@material-ui/core/Card'
@@ -12,7 +10,6 @@ import CardMedia from '@material-ui/core/CardMedia'
 
 const useStyles = makeStyles({
   media: {
-    // ⚠️ object-fit is not supported by IE 11.
     objectFit: 'cover',
     height: ' 100vh',
     width: '100vw',

@@ -1,6 +1,5 @@
 import React from 'react'
 import ProgressBar from 'react-animated-progress-bar'
-//  const myRef = document.querySelector('.scrollable-div')
 
 const MainProgressBar = ({
   percentage,
@@ -25,7 +24,6 @@ const MainProgressBar = ({
         excellent: '#08AF80',
         poor: 'red',
       }}
-      //  scrollArea={myAppRef}
     />
   )
 }

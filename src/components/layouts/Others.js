@@ -24,14 +24,11 @@ const useStyle = makeStyles((theme) => ({
     justifyContent: 'center',
     maxWidth: 190,
     margin: '1rem',
-
-    // background: 'var(--LightPink)',
   },
 
   timeLineItem: {
     background: 'var(--mainWhite)',
     padding: '1rem',
-    // borderBottom: '2px solid var(--mainLava)',
     position: 'relative',
     margin: '1rem 1rem 1rem 1rem',
     clear: 'both',
@@ -43,10 +40,8 @@ const useStyle = makeStyles((theme) => ({
       content: "''",
       position: 'absolute',
       right: '-0.625rem',
-      // left: '1rem',
       top: 'calc(50% - 5px)',
       borderStyle: 'solid',
-      //??????
       borderColor:
         'var(--mainPink) var(--primaryColor) transparent transparent',
       borderWidth: '0.625rem',
@@ -59,12 +54,10 @@ const useStyle = makeStyles((theme) => ({
         float: 'right',
         margin: '1rem',
         borderColor: 'cyan',
-        //???????
       },
       '&:nth-of-type(2n):before': {
         right: 'auto',
         left: '-0.624rem',
-        //???????
         borderColor:
           'transparent  transparent var(--mainPink) var(--primaryColor)',
       },
@@ -106,7 +99,6 @@ const Others = ({
 
   return (
     <>
-      {/* start contains */}
       <Box component='div' className={classes.timeLineItem}>
         <Grid
           container
@@ -115,7 +107,6 @@ const Others = ({
           alignItems='center'
           alignContent='center'
         >
-          {/* ************* Start AWS***************** */}
           <Card className={classes.root}>
             <CardHeader
               avatar={
@@ -137,8 +128,7 @@ const Others = ({
               />
             </CardContent>
           </Card>
-          {/* ************* End AWS***************** */}
-          {/* ************* Start GitHub***************** */}
+
           <Card className={classes.root}>
             <CardHeader
               avatar={
@@ -160,8 +150,7 @@ const Others = ({
               />
             </CardContent>
           </Card>
-          {/* ************* End GitHub***************** */}
-          {/* ************* Start Test***************** */}
+
           <Card className={classes.root}>
             <CardHeader
               avatar={
@@ -172,7 +161,6 @@ const Others = ({
                 />
               }
               title='Testing'
-              // subheader='Github'
             />
 
             <CardContent>
@@ -187,8 +175,7 @@ const Others = ({
               />
             </CardContent>
           </Card>
-          {/* ************* End Test***************** */}
-          {/* ************* Start Photoshop***************** */}
+
           <Card className={classes.root}>
             <CardHeader
               avatar={
@@ -199,7 +186,6 @@ const Others = ({
                 />
               }
               title='Photoshop'
-              // subheader='Github'
             />
 
             <CardContent>
@@ -214,7 +200,6 @@ const Others = ({
               />
             </CardContent>
           </Card>
-          {/* ************* End Photoshop***************** */}
         </Grid>
       </Box>
     </>

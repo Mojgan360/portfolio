@@ -5,8 +5,6 @@ import Backend from '../layouts/Backend'
 import Database from '../layouts/Database'
 import Others from '../layouts/Others'
 
-//skill & Experience
-//material-ui
 import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
@@ -60,10 +58,8 @@ const useStyle = makeStyles((theme) => ({
       content: "''",
       position: 'absolute',
       right: '-0.625rem',
-      //left: '1rem',
       top: 'calc(50% - 5px)',
       borderStyle: 'solid',
-      //??????
       borderColor:
         'var(--mainLava) var(--primaryColor) transparent transparent',
       borderWidth: '0.625rem',
@@ -121,61 +117,42 @@ const Resume = () => {
         className={`${classes.mainContainer} ${classes.root}`}
       >
         <Title title='skills' center />
-        {/* ******* Start Box-header******** */}
         <Box component='header'>
-          {/* ******* Start Box-TimeLine  1******** */}
           <Box component='div' className={classes.timeLine}>
-            {/* start of banner */}
             <Typography
               varient='h2'
               className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
               Front-end DEV
             </Typography>
-            {/* Start of Frontend */}
             <Frontend />
-            {/* End of Frontend */}
             <Typography
               varient='h2'
               className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
               Back-end DEV
             </Typography>
-            {/* end of Backend */}
-            {/* start Backend */}
-            <Backend />
-            {/* end contains */}
-          </Box>
-          {/* *******  End of Box-TimeLine  1 ******** */}
 
-          {/* ******* Start Box-TimeLine  2 ******** */}
+            <Backend />
+          </Box>
+
           <Box component='div' className={classes.timeLine}>
-            {/* start of banner */}
             <Typography
               varient='h2'
               className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
               Database
             </Typography>
-            {/* Start of Frontend */}
             <Database />
-            {/* End of Frontend */}
             <Typography
               varient='h2'
               className={`${classes.timeLineYear} ${classes.timeLineItem}`}
             >
               Others
             </Typography>
-            {/* end of Backend */}
-            {/* start Backend */}
             <Others />
-            {/* end contains */}
           </Box>
-          {/* *******  End of Box-TimeLine  2 ******** */}
-
-          {/* ******* Start Box-TimeLine  2 ******** */}
         </Box>
-        {/* ******* end Box-header******** */}
         <br />
       </Box>
     </div>

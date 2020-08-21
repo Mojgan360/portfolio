@@ -34,7 +34,6 @@ const About = () => {
   const classes = useStyles()
 
   return (
-    // <Container maxWidth='fixed' className={classes.root}>
     <div className={classes.root} id='about'>
       <Title title='about me' center />
       <Grid container spacing={3}>

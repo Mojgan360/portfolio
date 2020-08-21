@@ -104,7 +104,6 @@ const Database = ({
 
   return (
     <>
-      {/* start contains */}
       <Box component='div' className={classes.timeLineItem}>
         <Grid
           container

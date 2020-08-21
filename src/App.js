@@ -10,7 +10,8 @@ import Portfolio from './components/pages/Portfolio'
 import About from './components/pages/About'
 
 import Footer from './components/layouts/Footer'
-// import PositionSe from './components/pages/PositionSe'
+import PositionSe from './components/pages/PositionSe'
+// import Contact from './components/pages/Contact'
 
 function App() {
   return (
@@ -21,8 +22,7 @@ function App() {
       <About />
       <Resume />
       <Portfolio />
-      {/* <PositionSe /> */}
-
+      <PositionSe />
       <Footer />
     </React.Fragment>
   )

@@ -10,7 +10,6 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import { Grid, Box } from '@material-ui/core'
 
-//
 import Title from '../layouts/Title'
 import merciapp from '../../images/merciapp.png'
 import devtodev from '../../images/devtodev.png'
@@ -28,7 +27,6 @@ const useStyles = makeStyles({
   cardContainer: {
     maxWidth: 345,
     margin: '5rem auto',
-    //
     display: 'inline - block',
     position: 'relative',
     cursor: 'pointer',
@@ -42,7 +40,6 @@ const Portfolio = () => {
       <Title title='My Works' center />
       <Box component='div' className={classes.mainContainer}>
         <Grid container justify='center'>
-          {/* Project 1 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
               <CardActionArea>
@@ -85,7 +82,6 @@ const Portfolio = () => {
               </CardActions>
             </Card>
           </Grid>
-          {/* Project 2*/}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
               <CardActionArea>
@@ -130,7 +126,6 @@ const Portfolio = () => {
               </CardActions>
             </Card>
           </Grid>
-          {/* Project 1 */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
               <CardActionArea>

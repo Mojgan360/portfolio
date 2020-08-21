@@ -7,8 +7,6 @@ import Link from '@material-ui/core/Link'
 
 import SendIcon from '@material-ui/icons/Send'
 
-//
-//CSS
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: theme.spacing(8),
@@ -17,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   contactForm: {
-    width: '100%', // Fix IE 11 issue.
+    width: '100%',
     marginTop: theme.spacing(1),
   },
   button: {
@@ -112,20 +110,7 @@ const Contact = () => {
             size='medium'
             inputProps={{ style: { color: 'var(--mainStyle)' } }}
           />
-          {/* <TextField
-            name='message'
-            id='outlined-full-width'
-            label='Label'
-            style={{ margin: 8 }}
-            placeholder='Placeholder'
-            helperText='Full width!'
-            fullWidth
-            margin='normal'
-            InputLabelProps={{
-              shrink: true,
-            }}
-            variant='outlined' */}
-          {/* /> */}
+
           <Button
             className={classes.button}
             variant='outlined'
@@ -142,21 +127,3 @@ const Contact = () => {
 }
 
 export default Contact
-
-//***** Other solution with Styled-componet
-// const StyledTextField = styled(TextField)`
-//   label.focused {
-//     color: green;
-//   }
-//   .MuiOutlinedInput-root {
-//     fieldset {
-//       border-color: red;
-//     }
-//     &:hover fieldset {
-//       border-color: yellow;
-//     }
-//     &.Mui-focused fieldset {
-//       border-color: green;
-//     }
-//   }
-// `;

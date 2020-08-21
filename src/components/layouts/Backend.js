@@ -103,7 +103,6 @@ const Backend = ({
 
   return (
     <>
-      {/* start contains */}
       <Box component='div' className={classes.timeLineItem}>
         <Grid
           container
@@ -112,7 +111,6 @@ const Backend = ({
           alignItems='center'
           alignContent='center'
         >
-          {/* ************* Start Node***************** */}
           <Card className={classes.root}>
             <CardHeader
               avatar={
@@ -123,7 +121,6 @@ const Backend = ({
                 />
               }
               title='Node'
-              // subheader='Express.js'
             />
 
             <CardContent>
@@ -138,8 +135,7 @@ const Backend = ({
               />
             </CardContent>
           </Card>
-          {/* ************* End Node***************** */}
-          {/* ************* Start Java***************** */}
+
           <Card className={classes.root}>
             <CardHeader
               avatar={
@@ -150,7 +146,6 @@ const Backend = ({
                 />
               }
               title='Java'
-              // subheader=''
             />
 
             <CardContent>
@@ -165,7 +160,6 @@ const Backend = ({
               />
             </CardContent>
           </Card>
-          {/* ************* End JS***************** */}
         </Grid>
       </Box>
     </>
