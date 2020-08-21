@@ -9,7 +9,6 @@ import bg from '../../images/bg.jpg'
 //CSS
 const useStyles = makeStyles((theme) => ({
   root: {
-    // flexGrow: 1,
     width: '60%',
     left: '10%',
     position: 'relative',
