@@ -73,7 +73,7 @@ const Portfolio = () => {
               </CardActionArea>
               <CardActions>
                 <Button
-                  href='https://merciapp.herokuapp.com/'
+                  href='https://wataa-app.herokuapp.com/'
                   size='small'
                   color='primary'
                 >
