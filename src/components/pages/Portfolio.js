@@ -149,8 +149,7 @@ const Portfolio = () => {
                     color='textSecondary'
                     component='p'
                   >
-                    A tech store app, Frontend: JavaScript, React, Redux, HTML,
-                    CSS
+                    A yellow page tech store app!
                   </Typography>
                   <Typography
                     variant='subtitle1'
@@ -158,7 +157,9 @@ const Portfolio = () => {
                     component='p'
                   >
                     <br />
-                    Frontend: React, JavaScript, Redux, HTML, CSS
+                    {
+                      'Frontend: {React: Redux, JavaScript, Redux, HTML, CSS: styled-components}'
+                    }
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -201,7 +202,10 @@ const Portfolio = () => {
                     color='textSecondary'
                     component='p'
                   >
-                    <br /> React, JavaScript, HTML, CSS: Styled Components
+                    <br />
+                    {
+                      '[ frontend: {React: Hooks, JavaScript, HTML, CSS: styled-components}, backend: {Auth0} ]'
+                    }
                   </Typography>
                 </CardContent>
               </CardActionArea>
