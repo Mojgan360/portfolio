@@ -188,7 +188,7 @@ const Portfolio = () => {
                 />
                 <CardContent>
                   <Typography gutterBottom variant='h5' component='h2'>
-                    Github Serach User App
+                    Github Search User App
                   </Typography>
                   <Typography
                     variant='body2'
