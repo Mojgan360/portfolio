@@ -14,6 +14,7 @@ import Title from '../layouts/Title'
 import merciapp from '../../images/merciapp.png'
 import devtodev from '../../images/devtodev.png'
 import ciccishop from '../../images/ciccishop.png'
+import githubSU from '../../images/github-su.png'
 
 const useStyles = makeStyles({
   root: {
@@ -82,7 +83,9 @@ const Portfolio = () => {
               </CardActions>
             </Card>
           </Grid>
+          {/* Start Cart */}
           <Grid item xs={12} sm={8} md={6}>
+            {/* Start Cart */}
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
@@ -126,6 +129,7 @@ const Portfolio = () => {
               </CardActions>
             </Card>
           </Grid>
+          {/* End of Cart */}
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
               <CardActionArea>
@@ -154,7 +158,7 @@ const Portfolio = () => {
                     component='p'
                   >
                     <br />
-                    Frontend: JavScript, React, Redux, HTML, CSS
+                    Frontend: React, JavaScript, Redux, HTML, CSS
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -169,6 +173,50 @@ const Portfolio = () => {
               </CardActions>
             </Card>
           </Grid>
+          {/* Start Cart */}
+          <Grid item xs={12} sm={8} md={6}>
+            {/* Start github-su */}
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  component='img'
+                  alt='Contemplative Reptile'
+                  height='220'
+                  image={githubSU}
+                  title='Contemplative Reptile'
+                />
+                <CardContent>
+                  <Typography gutterBottom variant='h5' component='h2'>
+                    Merci App
+                  </Typography>
+                  <Typography
+                    variant='body2'
+                    color='textSecondary'
+                    component='p'
+                  >
+                    Amazing search for Github user
+                  </Typography>
+                  <Typography
+                    variant='subtitle1'
+                    color='textSecondary'
+                    component='p'
+                  >
+                    <br /> React, JavaScript, HTML, CSS: Styled Components
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  href='https://react-github-su.netlify.app/'
+                  size='small'
+                  color='primary'
+                >
+                  Live Demo
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          {/* End of githu-su */}
         </Grid>
       </Box>
     </div>
