@@ -2,7 +2,6 @@ import React from 'react'
 import ProgressBar from '../layouts/MainProgressBar'
 import javaIcone from '../../images/java.png'
 import nodeIcone from '../../images/node.png'
-
 //skill & Experience
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'

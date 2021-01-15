@@ -57,7 +57,7 @@ const Navbar = () => {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={3500}
+            duration={500}
             component={Link}
             to={item.listPath}
           >
