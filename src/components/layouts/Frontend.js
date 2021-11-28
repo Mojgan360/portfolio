@@ -5,7 +5,7 @@ import jsIcone from '../../images/js.png'
 import reactIcone from '../../images/ract-redux.png'
 import cssIcone from '../../images/css.png'
 import webpackIcone from '../../images/webpack.png'
-import expressIcone from '../../images/express.png'
+// import expressIcone from '../../images/express.png'
 import materialUiIcone from '../../images/mateialui.png'
 
 //skill & Experience
@@ -245,7 +245,7 @@ const Frontend = ({
           </Card>
           {/* ************* End webpack***************** */}
           {/* ************* Start express***************** */}
-          <Card className={classes.root}>
+          {/* <Card className={classes.root}>
             <CardHeader
               avatar={
                 <Avatar
@@ -268,7 +268,7 @@ const Frontend = ({
                 hollowBackgroundColor='#828282'
               />
             </CardContent>
-          </Card>
+          </Card> */}
           {/* ************* End express***************** */}
           {/* ************* Start Material-UI***************** */}
           <Card className={classes.root}>

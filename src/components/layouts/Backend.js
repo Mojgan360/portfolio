@@ -2,6 +2,8 @@ import React from 'react'
 import ProgressBar from '../layouts/MainProgressBar'
 import javaIcone from '../../images/java.png'
 import nodeIcone from '../../images/node.png'
+import expressIcone from '../../images/express.png'
+
 //skill & Experience
 //material-ui
 import { makeStyles } from '@material-ui/core/styles'
@@ -159,6 +161,32 @@ const Backend = ({
               />
             </CardContent>
           </Card>
+          {/* ************* Start express***************** */}
+          <Card className={classes.root}>
+            <CardHeader
+              avatar={
+                <Avatar
+                  variant='square'
+                  src={expressIcone}
+                  className={classes.avatar}
+                />
+              }
+              title='Express.js'
+            />
+
+            <CardContent>
+              <ProgressBar
+                className={classes.progress}
+                fontColor='var(--mainWhite)'
+                trackWidth='10'
+                percentage='80'
+                trackPathColor='var(--mainWhite)'
+                trackBorderColor='var(--LightPink)'
+                hollowBackgroundColor='#828282'
+              />
+            </CardContent>
+          </Card>
+          {/* ************* End express***************** */}
         </Grid>
       </Box>
     </>

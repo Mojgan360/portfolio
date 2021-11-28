@@ -16,6 +16,7 @@ import devtodev from '../../images/devtodev.png'
 import ciccishop from '../../images/ciccishop.png'
 import githubSU from '../../images/github-su.png'
 import nest from '../../images/nest.png'
+import gpt3 from '../../images/gpt3.png'
 
 const useStyles = makeStyles({
   root: {
@@ -42,6 +43,95 @@ const Portfolio = () => {
       <Title title='My Works' center />
       <Box component='div' className={classes.mainContainer}>
         <Grid container justify='center'>
+          {/* Start Cart  NEST*/}
+          <Grid item xs={12} sm={8} md={6}>
+            {/* Start nest */}
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  component='img'
+                  alt='Contemplative Reptile'
+                  height='220'
+                  image={nest}
+                  title='Contemplative Reptile'
+                />
+                <CardContent>
+                  <Typography gutterBottom variant='h5' component='h2'>
+                    Inredningsdesign App
+                  </Typography>
+                  <Typography
+                    variant='body2'
+                    color='textSecondary'
+                    component='p'
+                  ></Typography>
+                  <Typography
+                    variant='subtitle1'
+                    color='textSecondary'
+                    component='p'
+                  >
+                    <br />
+                    {
+                      '[ frontend: {React: Hooks, JavaScript, HTML, CSS: styled-components}, backend: {Auth0} ]'
+                    }
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  href='https://nest-store.netlify.app/'
+                  size='small'
+                  color='primary'
+                >
+                  Live Demo
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          {/* End of Nest */}
+          {/* Start Cart  GPT3*/}
+          <Grid item xs={12} sm={8} md={6}>
+            {/* Start nest */}
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  component='img'
+                  alt='Contemplative Reptile'
+                  height='220'
+                  image={gpt3}
+                  title='Contemplative Reptile'
+                />
+                <CardContent>
+                  <Typography gutterBottom variant='h5' component='h2'>
+                    GPT-3 Modern UI/UX
+                  </Typography>
+                  <Typography
+                    variant='body2'
+                    color='textSecondary'
+                    component='p'
+                  ></Typography>
+                  <Typography
+                    variant='subtitle1'
+                    color='textSecondary'
+                    component='p'
+                  >
+                    <br />
+                    {'[  Responsive Modern UI/UX Website in React JS]'}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  href='https://happy-gtp3.netlify.app/'
+                  size='small'
+                  color='primary'
+                >
+                  Live Demo
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          {/* End of GPT3 */}
+
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
               <CardActionArea>
@@ -175,7 +265,7 @@ const Portfolio = () => {
               </CardActions>
             </Card>
           </Grid>
-          {/* Start Cart */}
+          {/* End Cart */}
           <Grid item xs={12} sm={8} md={6}>
             {/* Start github-su */}
             <Card className={classes.cardContainer}>
@@ -222,53 +312,6 @@ const Portfolio = () => {
             </Card>
           </Grid>
           {/* End of githu-su */}
-          {/* Start Cart  NEST*/}
-          <Grid item xs={12} sm={8} md={6}>
-            {/* Start nest */}
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  component='img'
-                  alt='Contemplative Reptile'
-                  height='220'
-                  image={nest}
-                  title='Contemplative Reptile'
-                />
-                <CardContent>
-                  <Typography gutterBottom variant='h5' component='h2'>
-                    Inredningsdesign App
-                  </Typography>
-                  <Typography
-                    variant='body2'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    still working....
-                  </Typography>
-                  <Typography
-                    variant='subtitle1'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    <br />
-                    {
-                      '[ frontend: {React: Hooks, JavaScript, HTML, CSS: styled-components}, backend: {Auth0} ]'
-                    }
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  href='https://nest-store.netlify.app/'
-                  size='small'
-                  color='primary'
-                >
-                  Live Demo
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          {/* End of Nest */}
         </Grid>
       </Box>
     </div>
