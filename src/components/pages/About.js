@@ -43,7 +43,7 @@ const About = () => {
 
         <Grid item xs={12} sm={10}>
           {' '}
-          <Typography variant='h5' className={classes.paper}>
+          <Typography variant='h5' className={classes.paper} style={{'letter-spacing': '1px'}}>
             {' '}
             I have experience working as a frontend developer, full-stack developer, and interface designer. My interests include mobile applications as well as the back-end, front-end, and system management. You can tell that I am curious about every aspect of application development.
  I was born in Tehran, Iran and is currently living in Malmo, Sweden.
