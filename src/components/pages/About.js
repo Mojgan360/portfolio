@@ -45,11 +45,9 @@ const About = () => {
           {' '}
           <Typography variant='h5' className={classes.paper}>
             {' '}
-            I am a full-stack developer who is passionate about interface
-            design. My interests range from back-side, front-end, system
-            management to mobile applications. As you can see, I am interested
-            in all parts of application development. Now I am focusing on MERN
-            stack.
+            I have experience working as a frontend developer, full-stack developer, and interface designer. My interests include mobile applications as well as the back-end, front-end, and system management. You can tell that I am curious about every aspect of application development.
+ I was born in Tehran, Iran and is currently living in Malmo, Sweden.
+I am a passionate individual that is highly motivated, process-oriented, and enjoys challenges and discovering new things. I have a background in graphics and programming, and in my own time I like painting and photography.
           </Typography>
         </Grid>
       </Grid>
