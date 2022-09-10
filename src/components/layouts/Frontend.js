@@ -2,11 +2,15 @@ import React from 'react'
 import ProgressBar from '../layouts/MainProgressBar'
 import htmlIcone from '../../images/html5.png'
 import jsIcone from '../../images/js.png'
-import reactIcone from '../../images/ract-redux.png'
+import reactIcone from '../../images/react.png'
+
+import reactReduxIcone from '../../images/ract-redux.png'
 import cssIcone from '../../images/css.png'
-import webpackIcone from '../../images/webpack.png'
-// import expressIcone from '../../images/express.png'
-import materialUiIcone from '../../images/mateialui.png'
+import typeIcone from '../../images/type.png'
+ import hooksIcone from '../../images/hooks.png'
+import toolkitIcone from '../../images/toolkit.png'
+import styled from '../../images/styled.png'
+
 
 //skill & Experience
 //material-ui
@@ -189,8 +193,39 @@ const Frontend = ({
             </CardContent>
           </Card>
           {/* ************* End JS***************** */}
-          {/* ************* Start React***************** */}
-          <Card className={classes.root}>
+
+
+ {/* ************* Start TypeScript ***************** */}
+ <Card className={classes.root}>
+            <CardHeader
+              avatar={
+                <Avatar
+                  variant='square'
+                  src={typeIcone}
+                  aria-label='recipe'
+                  className={classes.avatar}
+                />
+              }
+              title='TypeScript'
+            />
+
+            <CardContent>
+              <ProgressBar
+                className={classes.progress}
+                fontColor='var(--mainWhite)'
+                trackWidth='10'
+                percentage='85'
+                trackPathColor='var(--mainWhite)'
+                trackBorderColor='var(--LightPink)'
+                hollowBackgroundColor='#E8C954'
+              />
+            </CardContent>
+          </Card>
+          {/* ************* End TypeScript***************** */}
+
+
+  {/* ************* Start React***************** */}
+  <Card className={classes.root}>
             <CardHeader
               avatar={
                 <Avatar
@@ -199,8 +234,8 @@ const Frontend = ({
                   className={classes.avatar}
                 />
               }
-              title='React'
-              subheader='Redux, Hooks'
+              title='React.js'
+              // subheader='React-Redux'
             />
 
             <CardContent>
@@ -216,19 +251,108 @@ const Frontend = ({
             </CardContent>
           </Card>
           {/* ************* End React***************** */}
-          {/* ************* Start webpack***************** */}
+
+          {/* ************* Start React-Redux ***************** */}
           <Card className={classes.root}>
             <CardHeader
               avatar={
                 <Avatar
                   variant='square'
-                  src={webpackIcone}
+                  src={reactReduxIcone}
+                  className={classes.avatar}
+                />
+              }
+              title='React-Redux'
+              // subheader='React-Redux'
+            />
+
+            <CardContent>
+              <ProgressBar
+                className={classes.progress}
+                fontColor='var(--mainWhite)'
+                trackWidth='10'
+                percentage='80'
+                trackPathColor='var(--mainWhite)'
+                trackBorderColor='var(--LightPink)'
+                hollowBackgroundColor='#6BDCF9'
+              />
+            </CardContent>
+          </Card>
+          {/* ************* End React-Redux***************** */}
+
+
+
+  {/* ************* Start Hooks***************** */}
+  <Card className={classes.root}>
+            <CardHeader
+              avatar={
+                <Avatar
+                  variant='square'
+                  src={hooksIcone}
+                  className={classes.avatar}
+                  style={{'width': '100%'}}
+                />
+              }
+              title='React-Hooks'
+              // subheader='Styles'
+            />
+
+            <CardContent>
+              <ProgressBar
+                className={classes.progress}
+                fontColor='var(--mainWhite)'
+                trackWidth='10'
+                percentage='90'
+                trackPathColor='var(--mainWhite)'
+                trackBorderColor='var(--LightPink)'
+                hollowBackgroundColor='#2C98F0'
+              />
+            </CardContent>
+          </Card>
+          {/* ************* End Hooks ***************** */}
+
+  {/* ************* Start Toolkit***************** */}
+  <Card className={classes.root}>
+            <CardHeader
+              avatar={
+                <Avatar
+                  variant='square'
+                  src={toolkitIcone}
+                  className={classes.avatar}
+                  style={{'width': '100%'}}
+                />
+              }
+              // title='Material-UI'
+              // subheader='Styles'
+            />
+
+            <CardContent>
+              <ProgressBar
+                className={classes.progress}
+                fontColor='var(--mainWhite)'
+                trackWidth='10'
+                percentage='90'
+                trackPathColor='var(--mainWhite)'
+                trackBorderColor='var(--LightPink)'
+                hollowBackgroundColor='#2C98F0'
+              />
+            </CardContent>
+          </Card>
+          {/* ************* End Toolkit ***************** */}
+
+          {/* ************* Start Styled Components  ***************** */}
+          <Card className={classes.root}>
+            <CardHeader
+              avatar={
+                <Avatar
+                  variant='square'
+                  src={styled}
                   aria-label='recipe'
                   className={classes.avatar}
                 />
               }
-              title='webpack'
-              subheader='Build Tools'
+              title='Styled Components '
+              // subheader='css'
             />
 
             <CardContent>
@@ -243,7 +367,8 @@ const Frontend = ({
               />
             </CardContent>
           </Card>
-          {/* ************* End webpack***************** */}
+          {/* ************* End Styled Components ***************** */}
+
           {/* ************* Start express***************** */}
           {/* <Card className={classes.root}>
             <CardHeader
@@ -270,33 +395,7 @@ const Frontend = ({
             </CardContent>
           </Card> */}
           {/* ************* End express***************** */}
-          {/* ************* Start Material-UI***************** */}
-          <Card className={classes.root}>
-            <CardHeader
-              avatar={
-                <Avatar
-                  variant='square'
-                  src={materialUiIcone}
-                  className={classes.avatar}
-                />
-              }
-              title='Material-UI'
-              subheader='Styles'
-            />
-
-            <CardContent>
-              <ProgressBar
-                className={classes.progress}
-                fontColor='var(--mainWhite)'
-                trackWidth='10'
-                percentage='90'
-                trackPathColor='var(--mainWhite)'
-                trackBorderColor='var(--LightPink)'
-                hollowBackgroundColor='#2C98F0'
-              />
-            </CardContent>
-          </Card>
-          {/* ************* End Material-UI***************** */}
+        
         </Grid>
       </Box>
     </>
