@@ -17,6 +17,8 @@ import ciccishop from '../../images/ciccishop.png'
 import githubSU from '../../images/github-su.png'
 import nest from '../../images/nest.png'
 import gpt3 from '../../images/gpt3.png'
+import uxbank from '../../images/ux-bank.png'
+
 
 const useStyles = makeStyles({
   root: {
@@ -46,35 +48,26 @@ const Portfolio = () => {
           {/* Start Cart  NEST*/}
           <Grid item xs={12} sm={8} md={6}>
             {/* Start nest */}
-            <Card className={classes.cardContainer}>
+            <Card className={classes.cardContainer} >
+           
+
               <CardActionArea>
+           
                 <CardMedia
+                    style={{objectFit:'contain'}}
                   component='img'
                   alt='Contemplative Reptile'
-                  height='220'
+                  height='250'
                   image={nest}
                   title='Contemplative Reptile'
                 />
                 <CardContent>
-                  <Typography gutterBottom variant='h5' component='h2'>
-                    Inredningsdesign App
-                  </Typography>
-                  <Typography
-                    variant='body2'
-                    color='textSecondary'
-                    component='p'
-                  ></Typography>
-                  <Typography
-                    variant='subtitle1'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    <br />
-                    {
-                      '[ frontend: {React: Hooks, JavaScript, HTML, CSS: styled-components}, backend: {Auth0} ]'
-                    }
-                  </Typography>
-                </CardContent>
+               
+                  <Typography variant="h6" gutterBottom>
+                  E-commare App     
+                   </Typography>
+                   <h4> Nest App</h4> 
+               </CardContent>
               </CardActionArea>
               <CardActions>
                 <Button
@@ -84,40 +77,84 @@ const Portfolio = () => {
                 >
                   Live Demo
                 </Button>
+                <Button
+                  href='https://github.com/Mojgan360/nest'
+                  size='small'
+                  color='primary'
+                >
+           Source Code
+          </Button>
               </CardActions>
             </Card>
           </Grid>
           {/* End of Nest */}
-          {/* Start Cart  GPT3*/}
+
+    {/* start of Cicci */}
+
+    <Grid item xs={12} sm={8} md={6}>
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                style={{objectFit:'none'}}
+                  component='img'
+                  alt='Contemplative Reptile'
+                  height='220'
+                  image={ciccishop}
+                  title='Contemplative Reptile'
+                />
+
+<CardContent>
+               
+               <Typography variant="h6" gutterBottom>
+               E-commare App     
+                </Typography>
+                <h4> Cicci App</h4> 
+            </CardContent>
+             
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  href='https://cicci-shop.netlify.app'
+                  size='small'
+                  color='primary'
+                >
+                  Live Demo
+                </Button>
+                <Button
+                  href='https://github.com/Mojgan360/cicci-store-master'
+                  size='small'
+                  color='primary'
+                >
+           Source Code
+          </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          {/* End Cart */}
+
+
+          {/* Start Cart  ux-bank*/}
           <Grid item xs={12} sm={8} md={6}>
             {/* Start nest */}
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
+                style={{objectFit:'contain'}}
                   component='img'
                   alt='Contemplative Reptile'
-                  height='220'
-                  image={gpt3}
+                  height='250'
+                  image={uxbank}
                   title='Contemplative Reptile'
                 />
-                <CardContent>
-                  <Typography gutterBottom variant='h5' component='h2'>
-                    GPT-3 Modern UI/UX
-                  </Typography>
-                  <Typography
-                    variant='body2'
-                    color='textSecondary'
-                    component='p'
-                  ></Typography>
-                  <Typography
-                    variant='subtitle1'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    <br />
-                    {'[  Responsive Modern UI/UX Website in React JS]'}
-                  </Typography>
-                </CardContent>
+
+               <CardContent>
+               
+               <Typography variant="h6" gutterBottom>
+               Modern UI/UX Website Design                 </Typography>
+                <h4> HooBank App</h4> 
+            </CardContent>
+
+              
               </CardActionArea>
               <CardActions>
                 <Button
@@ -127,6 +164,57 @@ const Portfolio = () => {
                 >
                   Live Demo
                 </Button>
+                <Button
+                  href='https://github.com/Mojgan360/bank-UX'
+                  size='small'
+                  color='primary'
+                >
+           Source Code
+          </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          {/* End of ux-bank */}
+
+
+
+          {/* Start Cart  GPT3*/}
+          <Grid item xs={12} sm={8} md={6}>
+            {/* Start nest */}
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                style={{objectFit:'contain'}}
+
+                  component='img'
+                  alt='Contemplative Reptile'
+                  height='250'
+                  image={gpt3}
+                  title='Contemplative Reptile'
+                />
+               <CardContent>
+               
+               <Typography variant="h6" gutterBottom>
+               GPT-3 Modern UI/UX                              </Typography>
+                <h4> GPT-3 App</h4> 
+            </CardContent>
+                
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  href='https://happy-gtp3.netlify.app/'
+                  size='small'
+                  color='primary'
+                >
+                  Live Demo
+                </Button>
+                <Button
+                  href='https://github.com/Mojgan360/gtp-website-responsive'
+                  size='small'
+                  color='primary'
+                >
+           Source Code
+          </Button>
               </CardActions>
             </Card>
           </Grid>
@@ -136,32 +224,31 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
+                                style={{objectFit:'fit'}}
+
                   component='img'
                   alt='Contemplative Reptile'
-                  height='220'
+                  height='250'
                   image={devtodev}
                   title='MERN'
                 ></CardMedia>
+
+
+
                 <CardContent>
-                  <Typography gutterBottom variant='h5' component='h2'>
-                    DevToDev App
-                  </Typography>
-                  <Typography
-                    variant='body2'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    An app for developers where they can share comments, and
-                    share experiences for help together.
-                  </Typography>
-                  <Typography
-                    variant='subtitle1'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    <br /> MERN: MongoDb, Express, React, Node
-                  </Typography>
-                </CardContent>
+               
+               <Typography variant="h6" gutterBottom>
+               Social Media App
+           
+                               </Typography>
+                <h4> DevToDev App</h4> 
+            </CardContent>
+
+
+
+
+
+
               </CardActionArea>
               <CardActions>
                 <Button
@@ -171,6 +258,13 @@ const Portfolio = () => {
                 >
                   Live Demo
                 </Button>
+                <Button
+                  href='https://github.com/Mojgan360/dev-joba-app'
+                  size='small'
+                  color='primary'
+                >
+           Source Code
+          </Button>
               </CardActions>
             </Card>
           </Grid>
@@ -180,34 +274,26 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
+                                style={{objectFit:'fit'}}
+
                   component='img'
                   alt='Contemplative Reptile'
-                  height='220'
+                  height='250'
                   image={merciapp}
                   title='Contemplative Reptile'
                 />
-                <CardContent>
-                  <Typography gutterBottom variant='h5' component='h2'>
-                    Merci App
-                  </Typography>
-                  <Typography
-                    variant='body2'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    It's time for our pets to have their instagram account, and
-                    share happiness through their nice pics, just create an
-                    account, follow other pets account, see nice pictures and
-                    have a great day!
-                  </Typography>
-                  <Typography
-                    variant='subtitle1'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    <br /> MERN: MongoDb, Express, React, Node
-                  </Typography>
-                </CardContent>
+
+
+
+<CardContent>
+               
+               <Typography variant="h6" gutterBottom>
+               Social Media App
+           
+                               </Typography>
+                <h4> Merci App</h4> 
+            </CardContent>
+
               </CardActionArea>
               <CardActions>
                 <Button
@@ -221,51 +307,8 @@ const Portfolio = () => {
             </Card>
           </Grid>
           {/* End of Cart */}
-          <Grid item xs={12} sm={8} md={6}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  component='img'
-                  alt='Contemplative Reptile'
-                  height='220'
-                  image={ciccishop}
-                  title='Contemplative Reptile'
-                />
-                <CardContent>
-                  <Typography gutterBottom variant='h5' component='h2'>
-                    Cicci-shop App
-                  </Typography>
-                  <Typography
-                    variant='body2'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    A yellow page tech store app!
-                  </Typography>
-                  <Typography
-                    variant='subtitle1'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    <br />
-                    {
-                      'Frontend: {React: Redux, JavaScript, Redux, HTML, CSS: styled-components}'
-                    }
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  href='https://cicci-shop.netlify.app'
-                  size='small'
-                  color='primary'
-                >
-                  Live Demo
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          {/* End Cart */}
+
+                
           <Grid item xs={12} sm={8} md={6}>
             {/* Start github-su */}
             <Card className={classes.cardContainer}>
@@ -288,16 +331,7 @@ const Portfolio = () => {
                   >
                     Amazing search for Github user
                   </Typography>
-                  <Typography
-                    variant='subtitle1'
-                    color='textSecondary'
-                    component='p'
-                  >
-                    <br />
-                    {
-                      '[ frontend: {React: Hooks, JavaScript, HTML, CSS: styled-components}, backend: {Auth0} ]'
-                    }
-                  </Typography>
+                 
                 </CardContent>
               </CardActionArea>
               <CardActions>
