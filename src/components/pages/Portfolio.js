@@ -18,7 +18,7 @@ import githubSU from "../../images/github-su.png";
 import nest from "../../images/nest.png";
 import gpt3 from "../../images/gpt3.png";
 import uxbank from "../../images/ux-bank.png";
-import studioshop from "../../images/studioshop.png";
+// import studioshop from "../../images/studioshop.png";
 
 const useStyles = makeStyles({
   root: {
