@@ -18,7 +18,7 @@ import githubSU from "../../images/github-su.png";
 import nest from "../../images/nest.png";
 import gpt3 from "../../images/gpt3.png";
 import uxbank from "../../images/ux-bank.png";
-// import studioshop from "../../images/studioshop.png";
+import studioshop from "../../images/studioshop.png";
 
 const useStyles = makeStyles({
   root: {
@@ -70,6 +70,7 @@ const Portfolio = () => {
                   href="https://nest-store.netlify.app/"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Live Demo
                 </Button>
@@ -77,6 +78,7 @@ const Portfolio = () => {
                   href="https://github.com/Mojgan360/nest"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Source Code
                 </Button>
@@ -111,6 +113,7 @@ const Portfolio = () => {
                   href="https://cicci-shop.netlify.app"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Live Demo
                 </Button>
@@ -118,6 +121,7 @@ const Portfolio = () => {
                   href="https://github.com/Mojgan360/cicci-store-master"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Source Code
                 </Button>
@@ -152,6 +156,7 @@ const Portfolio = () => {
                   href="https://ux-design-bank.netlify.app/"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Live Demo
                 </Button>
@@ -159,6 +164,7 @@ const Portfolio = () => {
                   href="https://github.com/Mojgan360/bank-UX"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Source Code
                 </Button>
@@ -192,6 +198,7 @@ const Portfolio = () => {
                   href="https://happy-gtp3.netlify.app/"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Live Demo
                 </Button>
@@ -199,6 +206,7 @@ const Portfolio = () => {
                   href="https://github.com/Mojgan360/gtp-website-responsive"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Source Code
                 </Button>
@@ -206,6 +214,48 @@ const Portfolio = () => {
             </Card>
           </Grid>
           {/* End of GPT3 */}
+
+          {/* Start Cart stadio*/}
+          <Grid item xs={12} sm={8} md={6}>
+            {/* Start nest */}
+            <Card className={classes.cardContainer}>
+              <CardActionArea>
+                <CardMedia
+                  style={{ objectFit: "contain" }}
+                  component="img"
+                  alt="Contemplative Reptile"
+                  height="250"
+                  image={studioshop}
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    Modern UI/UX - framer-motion
+                  </Typography>
+                  <h4> Studio Shop App</h4>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button
+                  href="https://cicci-website.netlify.app"
+                  size="small"
+                  color="primary"
+                  target="_blank"
+                >
+                  Live Demo
+                </Button>
+                <Button
+                  href="https://github.com/Mojgan360/walking_girl"
+                  size="small"
+                  color="primary"
+                  target="_blank"
+                >
+                  Source Code
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          {/* End of studio */}
 
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
@@ -230,6 +280,7 @@ const Portfolio = () => {
                   href="https://wataa-app.herokuapp.com/"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Live Demo
                 </Button>
@@ -237,6 +288,7 @@ const Portfolio = () => {
                   href="https://github.com/Mojgan360/dev-joba-app"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Source Code
                 </Button>
@@ -270,6 +322,7 @@ const Portfolio = () => {
                   href="https://merciapp.herokuapp.com/"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Live Demo
                 </Button>
@@ -307,6 +360,7 @@ const Portfolio = () => {
                   href="https://react-github-su.netlify.app/"
                   size="small"
                   color="primary"
+                  target="_blank"
                 >
                   Live Demo
                 </Button>
