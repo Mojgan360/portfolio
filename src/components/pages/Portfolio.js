@@ -207,46 +207,6 @@ const Portfolio = () => {
           </Grid>
           {/* End of GPT3 */}
 
-          {/* Start Cart  Studioshop*/}
-          <Grid item xs={12} sm={8} md={6}>
-            {/* Start nest */}
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  style={{ objectFit: "contain" }}
-                  component="img"
-                  alt="Contemplative Reptile"
-                  height="250"
-                  image={studioshop}
-                  title="Contemplative Reptile"
-                />
-                <CardContent>
-                  <Typography variant="h6" gutterBottom>
-                    Modern UI/UX ,framer-motion{" "}
-                  </Typography>
-                  <h4> Studio Cicci App</h4>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  href="https://cicci-website.netlify.app"
-                  size="small"
-                  color="primary"
-                >
-                  Live Demo
-                </Button>
-                <Button
-                  // href="https://github.com/Mojgan360/dev-joba-app"
-                  size="small"
-                  color="primary"
-                >
-                  working continue....
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-          {/* End of Studioshop */}
-
           <Grid item xs={12} sm={8} md={6}>
             <Card className={classes.cardContainer}>
               <CardActionArea>
@@ -283,6 +243,7 @@ const Portfolio = () => {
               </CardActions>
             </Card>
           </Grid>
+
           {/* Start Cart */}
           <Grid item xs={12} sm={8} md={6}>
             {/* Start Cart */}
