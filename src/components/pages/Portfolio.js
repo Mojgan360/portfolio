@@ -308,7 +308,7 @@ const Portfolio = () => {
                   size="small"
                   color="primary"
                 >
-                  Live Demo
+                  Live Demo.
                 </Button>
               </CardActions>
             </Card>
